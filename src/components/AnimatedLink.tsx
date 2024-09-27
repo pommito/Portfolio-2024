@@ -58,7 +58,7 @@ export default function AnimatedLink({ title, url }: TitleProps) {
       data-stagger-link
     >
       <motion.span
-        className="relative whitespace-nowrap"
+        className="relative whitespace-nowrap text-[#ededed]/50"
         data-stagger-link-text
         variants={titleAnim}
         initial="init"

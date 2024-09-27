@@ -14,10 +14,10 @@ export default function Header() {
             <AnimatedLink title="Works" url="/works" />
           </li>
           <li>
-            <Link href={`/resume`}>Resume</Link>
+            <AnimatedLink title="Resume" url="/resume" />
           </li>
           <li>
-            <Link href={`/contact`}>Contact</Link>
+            <AnimatedLink title="Contact" url="/contact" />
           </li>
           <li>
             <button>[ FR / EN ]</button>
