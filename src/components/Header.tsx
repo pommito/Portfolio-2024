@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import AnimatedLink from './AnimatedLink';
 
 export default function Header() {
   return (
@@ -10,13 +11,13 @@ export default function Header() {
       <nav>
         <ul className="flex flex-row gap-12">
           <li>
-            <Link href={`/works`}>Works</Link>
+            <AnimatedLink title="Works" url="/works" />
           </li>
           <li>
             <Link href={`/resume`}>Resume</Link>
           </li>
           <li>
-            <Link href={`/contact`}>Works</Link>
+            <Link href={`/contact`}>Contact</Link>
           </li>
           <li>
             <button>[ FR / EN ]</button>
