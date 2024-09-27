@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import Header from '@/components/Header';
+import Grid from '@/components/Grid';
 
 const dotemp8bit = localFont({
   src: './fonts/Dotemp-8bit.woff',
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dotemp8bit.variable} ${ppNeueMontrealBook.variable} antialiased`}>
+        <Grid />
         <Header />
         {children}
       </body>
