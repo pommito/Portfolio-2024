@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="fixed flex flex-row font-pp items-center justify-between  px-20 py-6 w-screen">
       <Link href="/" aria-label="Homepage">
-        <Image src={`/Logo_3D.png`} alt="This is my logo" width={48} height={48}></Image>
+        <Image src={`/Logo_3D.png`} alt="This is my logo" width={40} height={40}></Image>
       </Link>
       <nav>
         <ul className="flex flex-row gap-12">

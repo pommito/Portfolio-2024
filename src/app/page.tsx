@@ -1,10 +1,13 @@
+import Link from 'next/link';
+import { Folder } from 'lucide-react';
+
 import ResumeListItem from '@/components/ResumeListItem';
 
 import { workExperiences, educations } from '@/data/resume';
 
 export default function Home() {
   return (
-    <main className="font-pp px-20">
+    <main className="font-pp px-20 ">
       <section className="flex flex-col h-screen py-20">
         <h2 className="font-dot text-9xl mt-[20vh] ">Victor Lebecq</h2>
         <h1 className="text-9xl ml-20">Front end developer</h1>
@@ -15,7 +18,7 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="h-screen py-20">
+      <section className="py-20">
         <h3 className="font-dot text-6xl mb-20">About me</h3>
         <p className="leading-[150%] text-xl">
           Passionate about technology since childhood, I enjoy finding
@@ -24,18 +27,22 @@ export default function Home() {
           <br /> When I’m not coding, I’m probably skiing or exploring the mountains.
         </p>
 
-        <h4 className="font-dot opacity-50 mt-20 mb-6">[ Work Experiences ]</h4>
+        <h4 className="font-dot opacity-50 mt-20 mb-4">[ Work Experiences ]</h4>
         <ul>
           {workExperiences.map((exp, index) => (
             <ResumeListItem key={index} {...exp} />
           ))}
         </ul>
-        <h4 className="font-dot opacity-50 mt-20 mb-6">[ Education ]</h4>
+        <h4 className="font-dot opacity-50 mt-12 mb-4">[ Education ]</h4>
         <ul>
           {educations.map((exp, index) => (
             <ResumeListItem key={index} {...exp} />
           ))}
         </ul>
+        <Link href={'#'} className="flex items-center justify-center gap-2 mt-20 mx-auto w-fit">
+          <span className="text-xl">Download my resume</span>
+          <Folder size={20} />
+        </Link>
       </section>
     </main>
   );
