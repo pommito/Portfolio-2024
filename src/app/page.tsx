@@ -1,5 +1,7 @@
 import ResumeListItem from '@/components/ResumeListItem';
 
+import { workExperiences } from '@/data/resume';
+
 export default function Home() {
   return (
     <main className="font-pp px-20">
@@ -24,12 +26,9 @@ export default function Home() {
 
         <h4 className="font-dot opacity-50 mt-20 mb-6">[ Work Experiences ]</h4>
         <ul>
-          <ResumeListItem
-            jobTitle="Freelance Web Developer"
-            date="[ March 2024 - Present ]"
-            company="Titan Informatique"
-            techs="Wordpress | Javascript | PHP"
-          />
+          {workExperiences.map((exp, index) => (
+            <ResumeListItem key={index} {...exp} />
+          ))}
         </ul>
       </section>
     </main>
