@@ -1,0 +1,42 @@
+export interface experience {
+  title: string;
+  date: string;
+  company: string;
+  techs: string;
+}
+
+export const workExperiences: experience[] = [
+  {
+    title: 'Freelance Web Developer',
+    date: '[ March 2024 - Present ]',
+    company: 'Titan Informatique',
+    techs: 'Wordpress | Javascript | Php',
+  },
+  {
+    title: 'Web Developer',
+    date: '[ Feb 2022 - Present ]',
+    company: 'Freelance',
+    techs: 'Wordpress | React | Javascript',
+  },
+  {
+    title: 'Intern Web Marketer',
+    date: '[ Sept 2022 - Sept 2023 ]',
+    company: 'BVA Assurances',
+    techs: 'Wordpress | Html | css',
+  },
+];
+
+export const Educations: experience[] = [
+  {
+    title: 'Formation DWWWM',
+    date: '[ Oct 2023 - June 2024 ]',
+    company: "O'clock School",
+    techs: 'React | Laravel | Javascript',
+  },
+  {
+    title: 'Master Digital Marketing',
+    date: '[ Sept 2021 - Jul 2023 ]',
+    company: 'CNAM AURA',
+    techs: 'Marketing BS',
+  },
+];

@@ -24,9 +24,12 @@ export default function Home() {
 
         <h4 className="font-dot opacity-50 mt-20 mb-6">[ Work Experiences ]</h4>
         <ul>
-          <ResumeListItem />
-          <ResumeListItem />
-          <ResumeListItem />
+          <ResumeListItem
+            jobTitle="Freelance Web Developer"
+            date="[ March 2024 - Present ]"
+            company="Titan Informatique"
+            techs="Wordpress | Javascript | PHP"
+          />
         </ul>
       </section>
     </main>
