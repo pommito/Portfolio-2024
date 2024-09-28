@@ -64,12 +64,12 @@ export default function AnimatedLink({ title, url }: TitleProps) {
         initial="init"
         animate={isHovered ? 'hover' : 'init'}
       >
-        {title.split('').map((character: string, i: number) =>
-          character === ' ' ? (
+        {title.split('').map((letter: string, i: number) =>
+          letter === ' ' ? (
             <span key={i}>&nbsp;</span>
           ) : (
             <motion.span key={i} className="relative inline-block whitespace-nowrap" variants={letterAnim}>
-              {character}
+              {letter}
             </motion.span>
           )
         )}
