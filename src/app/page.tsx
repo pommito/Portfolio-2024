@@ -10,6 +10,30 @@ export default function Home() {
           Together, let’s bring your projects to life.
         </p>
       </section>
+
+      <section className="h-screen py-20">
+        <h3 className="font-dot text-6xl mb-20">About me</h3>
+        <p className="leading-[150%] text-xl">
+          Passionate about technology since childhood, I enjoy finding
+          <br /> solutions to solve problems. Currently based in Valencia, I work
+          <br /> remotely for several clients on various projects as a freelancer.
+          <br /> When I’m not coding, I’m probably skiing or exploring the mountains.
+        </p>
+
+        <h4 className="font-dot">[ Work Experiences ]</h4>
+        <ul>
+          <li className="flex justify-between items-center">
+            <div>
+              <h5 className="text-xl font-medium">Freelance Web Developer</h5>
+              <span className="font-dot text-sm opacity-50">[ March 2024 - Present ]</span>
+            </div>
+            <h6 className="font-pp text-xl opacity-50">Titan Informatique</h6>
+            <h6 className="text-xl">Wordpress | Javascript | PHP</h6>
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
     </main>
   );
 }

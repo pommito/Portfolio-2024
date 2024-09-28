@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        pp: ['var(--font-pp-book)'],
+        pp: ['var(--font-pp-neue-montreal)', 'sans-serif'],
         dot: ['var(--font-dotemp-bit)'],
       },
       colors: {
