@@ -26,7 +26,7 @@ export const workExperiences: experience[] = [
   },
 ];
 
-export const Educations: experience[] = [
+export const educations: experience[] = [
   {
     title: 'Formation DWWWM',
     date: '[ Oct 2023 - June 2024 ]',

@@ -1,6 +1,6 @@
 import ResumeListItem from '@/components/ResumeListItem';
 
-import { workExperiences } from '@/data/resume';
+import { workExperiences, educations } from '@/data/resume';
 
 export default function Home() {
   return (
@@ -27,6 +27,12 @@ export default function Home() {
         <h4 className="font-dot opacity-50 mt-20 mb-6">[ Work Experiences ]</h4>
         <ul>
           {workExperiences.map((exp, index) => (
+            <ResumeListItem key={index} {...exp} />
+          ))}
+        </ul>
+        <h4 className="font-dot opacity-50 mt-20 mb-6">[ Education ]</h4>
+        <ul>
+          {educations.map((exp, index) => (
             <ResumeListItem key={index} {...exp} />
           ))}
         </ul>
