@@ -1,6 +1,6 @@
-import { experience } from '@/data/resume';
+import { experienceType } from '@/data/resume';
 
-type ResumeListItemPropsType = experience;
+type ResumeListItemPropsType = experienceType;
 
 export default function ResumeListItem({ title, date, company, techs }: ResumeListItemPropsType) {
   return (

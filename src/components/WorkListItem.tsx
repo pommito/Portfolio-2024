@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { Github, Eye, EyeOff } from 'lucide-react';
 
-import { works } from '@/data/works';
+import { worksType } from '@/data/works';
 
-type WorkListItemPropsType = works;
+type WorkListItemPropsType = worksType;
 
 export default function WorkListItem({ title, techs, date, url, githubUrl }: WorkListItemPropsType) {
   return (

@@ -1,11 +1,11 @@
-export interface experience {
+export interface experienceType {
   title: string;
   date: string;
   company: string;
   techs: string;
 }
 
-export const workExperiences: experience[] = [
+export const workExperiences: experienceType[] = [
   {
     title: 'Freelance Web Developer',
     date: '[ March 2024 - Present ]',
@@ -26,7 +26,7 @@ export const workExperiences: experience[] = [
   },
 ];
 
-export const educations: experience[] = [
+export const educations: experienceType[] = [
   {
     title: 'Formation DWWWM',
     date: '[ Oct 2023 - June 2024 ]',
