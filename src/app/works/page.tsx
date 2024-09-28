@@ -2,6 +2,8 @@ import WorkListItem from '@/components/WorkListItem';
 import { Eye, Github } from 'lucide-react';
 import Link from 'next/link';
 
+import { works } from '@/data/works';
+
 export default function Works() {
   return (
     <main className="font-pp px-20 pt-40">
@@ -12,7 +14,9 @@ export default function Works() {
         <br /> project is open source. Feel free to browse those projects.
       </p>
       <ul>
-        <WorkListItem title="Gastini" techs={'[ Wordpress | Javascript ]'} date={'2024'} url={'https://gastini.fr'} />
+        {works.map((exp, index) => (
+          <WorkListItem key={index} {...exp} />
+        ))}
       </ul>
     </main>
   );

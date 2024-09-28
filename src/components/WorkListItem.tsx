@@ -13,7 +13,7 @@ export default function WorkListItem({ title, techs, date, url, githubUrl }: Wor
         <span className="font-dot text-sm opacity-50">{techs}</span>
       </div>
       <span className="font-pp text-xl opacity-50 w-1/5">{date}</span>
-      <div className="flex gap-6">
+      <div className="flex gap-6 w-1/5 justify-end">
         {githubUrl && (
           <Link href={githubUrl}>
             <Github size={20} />

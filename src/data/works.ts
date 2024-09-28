@@ -27,6 +27,12 @@ export const works: worksType[] = [
     url: 'https://gaitoni-plomberie.com',
   },
   {
+    title: 'Gojura',
+    techs: '[ Wordpress | Javascript ]',
+    date: '2024',
+    url: 'https://gojura.fr',
+  },
+  {
     title: 'WePeak',
     techs: '[ React | Redux | Symfony ]',
     date: '2024',
