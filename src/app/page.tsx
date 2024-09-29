@@ -1,9 +1,13 @@
 import Link from 'next/link';
-
-import ResumeListItem from '@/components/ResumeListItem';
-import downloadIcon from '../../public/download.svg';
-import { workExperiences, educations } from '@/data/resume';
 import Image from 'next/image';
+
+import downloadIcon from '../../public/download.svg';
+import arrowIcon from '../../public/arrow.svg';
+import placeholder from '../../public/placeholder.jpg';
+import ResumeListItem from '@/components/ResumeListItem';
+
+import { workExperiences, educations } from '@/data/resume';
+import ProjectCard from '@/components/ProjectCard';
 
 export default function Home() {
   return (
@@ -16,6 +20,16 @@ export default function Home() {
           <b>Laravel</b>. With a keen eye for design, I love crafting immersive and scalable experiences on the web.
           Together, let’s bring your projects to life.
         </p>
+      </section>
+
+      <section className="flex flex-col h-screen max-h py-20">
+        <h3 className="font-dot text-6xl mb-20">Selected project</h3>
+        <div className="w-1/2">
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+        </div>
       </section>
 
       <section className="py-20">
