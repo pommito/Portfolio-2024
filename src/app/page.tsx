@@ -40,7 +40,7 @@ export default function Home() {
           ))}
         </ul>
         <Link href={'#'} className="flex items-center justify-center gap-2 mt-20 mx-auto w-fit">
-          <span className="text-xl">Download my resume</span>
+          <span className="font-dot text-xl">Download my resume</span>
           <Image src={downloadIcon} alt="icon in the button for downloading resume" aria-hidden />
         </Link>
       </section>

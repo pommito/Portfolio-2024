@@ -21,12 +21,12 @@ export default function AnimatedLink({ title, url }: TitleProps) {
   const titleAnim = {
     init: {
       transition: {
-        staggerChildren: 0.01,
+        staggerChildren: 0.04,
       },
     },
     hover: {
       transition: {
-        staggerChildren: 0.01,
+        staggerChildren: 0.04,
       },
     },
   };
