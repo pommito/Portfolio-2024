@@ -30,6 +30,7 @@ export default function WorkListItem({ title, techs, date, url, githubUrl }: Wor
         ) : (
           <Image
             src={eyeOffIcon}
+            className="opacity-50"
             alt="eye off icon that show to the user that the project is no longer live"
             aria-hidden
           />

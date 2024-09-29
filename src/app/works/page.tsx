@@ -1,6 +1,4 @@
 import WorkListItem from '@/components/WorkListItem';
-import { Eye, Github } from 'lucide-react';
-import Link from 'next/link';
 
 import { works } from '@/data/works';
 
