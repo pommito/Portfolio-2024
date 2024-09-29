@@ -29,9 +29,9 @@ export default function MiniProjectMenu() {
           src={placeholder}
           alt={`thumbnail of project ${index}`}
           width={75}
-          className={
-            imageSelected === index ? `border border-white scale-95 transition-transform` : `scale-100 opacity-50`
-          }
+          className={`${
+            imageSelected === index ? 'border border-white scale-95 ' : 'scale-100 opacity-50'
+          } transition-transform ease-in-out`}
           onClick={() => {
             setImageSelected(index);
           }}
