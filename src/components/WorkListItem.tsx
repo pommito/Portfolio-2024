@@ -1,7 +1,11 @@
 import Link from 'next/link';
-import { Github, Eye, EyeOff } from 'lucide-react';
+import Image from 'next/image';
 
 import { worksType } from '@/data/works';
+
+import eyeIcon from '../../public/eye.svg';
+import eyeOffIcon from '../../public/eyeOff.svg';
+import githubIcon from '../../public/github.svg';
 
 type WorkListItemPropsType = worksType;
 
@@ -16,15 +20,19 @@ export default function WorkListItem({ title, techs, date, url, githubUrl }: Wor
       <div className="flex gap-6 w-1/5 justify-end">
         {githubUrl && (
           <Link href={githubUrl}>
-            <Github size={20} />
+            <Image src={githubIcon} alt="github icon that redirect to the source code of the project" aria-hidden />
           </Link>
         )}
         {url && url.length > 0 ? (
           <Link href={url}>
-            <Eye size={20} />
+            <Image src={eyeIcon} alt="eye icon that redirect to the live project website" aria-hidden />
           </Link>
         ) : (
-          <EyeOff size={20} />
+          <Image
+            src={eyeOffIcon}
+            alt="eye off icon that show to the user that the project is no longer live"
+            aria-hidden
+          />
         )}
       </div>
     </li>

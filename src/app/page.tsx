@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { Folder } from 'lucide-react';
 
 import ResumeListItem from '@/components/ResumeListItem';
-
+import downloadIcon from '../../public/download.svg';
 import { workExperiences, educations } from '@/data/resume';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -41,7 +41,7 @@ export default function Home() {
         </ul>
         <Link href={'#'} className="flex items-center justify-center gap-2 mt-20 mx-auto w-fit">
           <span className="text-xl">Download my resume</span>
-          <Folder size={20} />
+          <Image src={downloadIcon} alt="icon in the button for downloading resume" aria-hidden />
         </Link>
       </section>
     </main>
