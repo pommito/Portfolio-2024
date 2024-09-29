@@ -2,8 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import downloadIcon from '../../public/download.svg';
-import arrowIcon from '../../public/arrow.svg';
-import placeholder from '../../public/placeholder.jpg';
 import ResumeListItem from '@/components/ResumeListItem';
 
 import { workExperiences, educations } from '@/data/resume';
@@ -22,11 +20,9 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="flex flex-col h-screen max-h py-20">
-        <h3 className="font-dot text-6xl mb-20">Selected project</h3>
-        <div className="w-1/2">
-          <ProjectCard />
-          <ProjectCard />
+      <section className="flex flex-col min-h-screen max-h py-20">
+        <h3 className="font-dot text-6xl h-fit mb-20">Selected project</h3>
+        <div className="flex justify-between w-full">
           <ProjectCard />
           <ProjectCard />
         </div>
