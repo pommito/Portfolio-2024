@@ -1,8 +1,15 @@
+import { motion } from 'framer-motion-3d';
+
+import useMouse from '@/hooks/useMouse';
+import { useTransform } from 'framer-motion';
+
 export default function Model() {
+  const mouse = useMouse();
+
   return (
-    <mesh>
-      <planeGeometry args={[5, 5, 15, 15]} />
+    <motion.mesh position-x={mouse.x} position-y={mouse.y}>
+      <planeGeometry args={[2, 2, 15, 15]} />
       <meshBasicMaterial color={'red'} wireframe />
-    </mesh>
+    </motion.mesh>
   );
 }

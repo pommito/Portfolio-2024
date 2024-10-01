@@ -20,6 +20,9 @@ importers:
       framer-motion:
         specifier: ^11.9.0
         version: 11.9.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion-3d:
+        specifier: ^11.9.0
+        version: 11.9.0(@react-three/fiber@8.17.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.169.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.169.0)
       glsl-noise:
         specifier: ^0.0.0
         version: 0.0.0
@@ -953,6 +956,14 @@ packages:
     resolution: {integrity: sha512-Ld2g8rrAyMYFXBhEqMz8ZAHBi4J4uS1i/CxGMDnjyFWddMXLVcDp051DZfu+t7+ab7Wv6SMqpWmyFIj5UbfFvg==}
     engines: {node: '>=14'}
 
+  framer-motion-3d@11.9.0:
+    resolution: {integrity: sha512-LfwhSg+LV0fmIoB3psVuyWf70MZYchehr/wbxqymZ6P2EuMBz7s3mctkoJ5DYHV1xcn2idXHraFvtpOgfBpsXA==}
+    peerDependencies:
+      '@react-three/fiber': ^8.2.2
+      react: '>=18.0'
+      react-dom: '>=18.0'
+      three: '>=0.133'
+
   framer-motion@11.9.0:
     resolution: {integrity: sha512-nCfGxvsQecVLjjYDu35G2F5ls+ArE3FBfhxV0RSiisMaUKqteq5DMBFNRKwMyVj+VqKTNhawt+BV480YCHKFlQ==}
     peerDependencies:
@@ -1639,6 +1650,9 @@ packages:
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+
+  react-merge-refs@2.1.1:
+    resolution: {integrity: sha512-jLQXJ/URln51zskhgppGJ2ub7b2WFKGq3cl3NYKtlHoTG+dN2q7EzWrn3hN3EgPsTMvpR9tpq5ijdp7YwFZkag==}
 
   react-reconciler@0.27.0:
     resolution: {integrity: sha512-HmMDKciQjYmBRGuuhIaKA1ba/7a+UsM5FzOZsMO2JYHt9Jh8reCb7j1eDC95NOyUlKM9KRyvdx0flBuDvYSBoA==}
@@ -3236,6 +3250,17 @@ snapshots:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
 
+  framer-motion-3d@11.9.0(@react-three/fiber@8.17.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.169.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.169.0):
+    dependencies:
+      '@react-three/fiber': 8.17.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.169.0)
+      framer-motion: 11.9.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-merge-refs: 2.1.1
+      three: 0.169.0
+    transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
+
   framer-motion@11.9.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       tslib: 2.7.0
@@ -3934,6 +3959,8 @@ snapshots:
       scheduler: 0.23.2
 
   react-is@16.13.1: {}
+
+  react-merge-refs@2.1.1: {}
 
   react-reconciler@0.27.0(react@18.3.1):
     dependencies:
