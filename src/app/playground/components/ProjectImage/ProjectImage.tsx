@@ -4,6 +4,7 @@ import { motion } from 'framer-motion-3d';
 
 import useMouse from '@/hooks/useMouse';
 import useDimension from '@/hooks/useDimension';
+import { fragment, vertex } from './shader';
 
 export default function Model() {
   const dimension = useDimension();
@@ -19,7 +20,7 @@ export default function Model() {
   return (
     <motion.mesh position-x={x} position-y={y}>
       <planeGeometry args={[2, 2, 15, 15]} />
-      <meshBasicMaterial color={'red'} wireframe />
+      <shaderMaterial fragmentShader={fragment} vertexShader={vertex} />
     </motion.mesh>
   );
 }
