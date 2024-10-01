@@ -1,8 +1,7 @@
 export default function Experience() {
   return (
     <mesh>
-      <planeGeometry />
-      <meshBasicMaterial color={'red'} />
+      <planeBufferGeometry args={[1, 1]} />
     </mesh>
   );
 }

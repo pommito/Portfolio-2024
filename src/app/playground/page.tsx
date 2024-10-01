@@ -1,12 +1,9 @@
-import FullScreenCanvas from './components/Canvas';
-import Experience from './components/Experience';
+import Scene from './components/Scene';
 
 export default function Playground() {
   return (
     <main className="relative h-screen">
-      <FullScreenCanvas>
-        <Experience />
-      </FullScreenCanvas>
+      <Scene />
     </main>
   );
 }
