@@ -11,7 +11,7 @@ export default function MiniProjectMenu() {
   const images = [placeholder, placeholder, placeholder, placeholder];
 
   return (
-    <div className="flex gap-[2px] absolute bottom-6 left-1/2 -translate-x-1/2 cursor-grab">
+    <div className="flex absolute bottom-6 left-1/2 -translate-x-1/2 cursor-grab">
       <div
         className={`absolute w-full -top-[5px] -left-[5px] transition-transform duration-300 ease-in-out pointer-events-none`}
         style={{
