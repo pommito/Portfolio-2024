@@ -15,6 +15,6 @@ export default function useDimension() {
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  });
+  }, []);
   return dimension;
 }
