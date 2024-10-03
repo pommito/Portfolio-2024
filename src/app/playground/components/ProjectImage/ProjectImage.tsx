@@ -23,7 +23,6 @@ export default function Model() {
   });
 
   useAnimationProgress(uniforms);
-  console.log(uniforms.current.uProgress.value);
 
   return (
     <mesh ref={meshRef} scale={scale}>
