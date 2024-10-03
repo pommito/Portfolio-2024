@@ -17,44 +17,46 @@ uniform vec3 uFillColor;
 
 varying vec2 vUv;
 
+// This function make an easing effect based on time (t)
+float quadraticOut(float t) {
+  return -t * (t - 2.0);
+}
+
 // transition
 // pixelize
-          float pixelateProgress = map(uProgress,0.3,1.,0.,1.);
-          pixelateProgress = floor(pixelateProgress*12.)/12.;
-          float s = floor(mix(11., 50.,quadraticOut(pixelateProgress)));
-          vec2 gridSize = vec2(
-            s, 
-            floor(s/uAspect)
-          );
+float pixelateProgress = map(uProgress,0.3,1.,0.,1.);
+pixelateProgress = floor(pixelateProgress*12.)/12.;
+float s = floor(mix(11., 50.,quadraticOut(pixelateProgress)));
+vec2 gridSize = vec2(s, floor(s/uAspect));
 
-          vec2 newUV = floor(vUv * gridSize) / gridSize + 0.5/vec2(gridSize);
-          vec4 color = texture2D(uTexture, newUV);
-          float finalProgress = map(uProgress,0.75,1.,0.,1.);
-          color = mix(color, defaultColor, finalProgress);
+vec2 newUV = floor(vUv * gridSize) / gridSize + 0.5/vec2(gridSize);
+vec4 color = texture2D(uTexture, newUV);
+float finalProgress = map(uProgress,0.75,1.,0.,1.);
+color = mix(color, defaultColor, finalProgress);
 
 
-          // grid lines
-          vec2 multUV = fract(vUv * gridSize);
-          float lines = PristineGrid(vUv * gridSize, vec2(0.2*(1.-uProgress)));
+// grid lines
+vec2 multUV = fract(vUv * gridSize);
+float lines = PristineGrid(vUv * gridSize, vec2(0.2*(1.-uProgress)));
 
 
-          // discard - slide in animation
-          float discardProgress = map(uProgress,0.,0.8,0.,1.);
-          if(vUv.x>cubicOut(discardProgress)) discard;
+// discard - slide in animation
+float discardProgress = map(uProgress,0.,0.8,0.,1.);
+if(vUv.x>cubicOut(discardProgress)) discard;
 
 
-          // fill color
-          vec3 fillColor = uFillColor;
-          float gradWidth = mix(0.4,0.2,uProgress);
-          float customProg = map(cubicInOut(uProgress), 0.0, 1., -gradWidth, 1. - gradWidth);
-          float fillGradient = smoothstep(customProg, customProg+gradWidth, vUv.x);
+// fill color
+vec3 fillColor = uFillColor;
+float gradWidth = mix(0.4,0.2,uProgress);
+float customProg = map(cubicInOut(uProgress), 0.0, 1., -gradWidth, 1. - gradWidth);
+float fillGradient = smoothstep(customProg, customProg+gradWidth, vUv.x);
 
 
 
-          gl_FragColor.a = 1.;
-          gl_FragColor.rgb = blendNormal(vec3(1.-lines),color.rgb , 0.9);
-          gl_FragColor.rgb = mix( gl_FragColor.rgb,fillColor, fillGradient);
-          gl_FragColor.rgb = mix( gl_FragColor.rgb,defaultColor.rgb, finalProgress);
+gl_FragColor.a = 1.;
+gl_FragColor.rgb = blendNormal(vec3(1.-lines),color.rgb , 0.9);
+gl_FragColor.rgb = mix( gl_FragColor.rgb,fillColor, fillGradient);
+gl_FragColor.rgb = mix( gl_FragColor.rgb,defaultColor.rgb, finalProgress);
 
 void main() {
     vec2 gridSize = vec2(20.0, floor(20.0 / uAspectRatio));
