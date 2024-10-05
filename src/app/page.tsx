@@ -22,8 +22,9 @@ export default function Home() {
 
       <section className="flex flex-col min-h-screen max-h py-20">
         <h3 className="font-dot text-6xl h-fit mb-20">Selected project</h3>
-        <div className="flex justify-between w-full">
+        <div className="grid grid-cols-2 auto-rows-auto gap-20 w-full border border-red-500">
           <ProjectCard />
+          <ProjectCard className={'justify-self-end'} />
           <ProjectCard />
         </div>
       </section>

@@ -4,9 +4,13 @@ import Image from 'next/image';
 import placeholder from '@/../public/placeholder.jpg';
 import arrowIcon from '@/../public/arrow.svg';
 
-export default function ProjectCard() {
+type ProjectCardType = {
+  className?: string;
+};
+
+export default function ProjectCard({ className }: ProjectCardType) {
   return (
-    <article className="flex flex-col gap-3 w-[550px]">
+    <article className={`flex flex-col gap-3 w-[550px] ${className}`}>
       <Image src={placeholder} alt="Image relative to this project" />
       <div className="font-dot flex justify-between opacity-50">
         <time dateTime="2024">[ 2024 ]</time>
