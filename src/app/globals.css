@@ -30,6 +30,15 @@ a[data-stagger-link] [data-stagger-link-text] {
   text-shadow: 0px 1.5rem 0px var(--foreground);
 }
 
-.displacement {
-  filter: url(#displacementFilter);
+#circleMask-1 .displacement {
+  filter: url(#displacementFilter-1);
+}
+#circleMask-2 .displacement {
+  filter: url(#displacementFilter-2);
+}
+#circleMask-3 .displacement {
+  filter: url(#displacementFilter-3);
+}
+#circleMask-4 .displacement {
+  filter: url(#displacementFilter-4);
 }
