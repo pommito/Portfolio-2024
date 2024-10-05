@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 type ImageTransitionTypes = {
   src: string;
@@ -9,17 +10,18 @@ type ImageTransitionTypes = {
 export default function ImageTransition({ src, alt }: ImageTransitionTypes) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
-  // Dimensions de l'image
-  const imageWidth = 450; // Ajuste selon tes besoins
-  const imageHeight = 300; // Ajuste selon tes besoins
+  const imageWidth = 450;
+  const imageHeight = 300;
 
-  const r = useMemo(() => Math.sqrt(imageWidth ** 2 + imageHeight ** 2) * 1.05, [imageWidth, imageHeight]);
+  const r = useMemo(
+    () => (Math.sqrt(imageWidth * imageWidth + imageHeight * imageHeight) / 2) * 1.15,
+    [imageWidth, imageHeight]
+  );
 
-  // Variants pour le masque
   const circleVariants = {
     initial: { r: r },
-    animate: { r: 0 }, // Réduit le rayon à 0 pour révéler l'image
-    exit: { r: r }, // Remet le rayon à la taille initiale lors de la sortie
+    animate: { r: 0 },
+    exit: { r: 0 },
   };
 
   const circleTransition = {
@@ -30,8 +32,8 @@ export default function ImageTransition({ src, alt }: ImageTransitionTypes) {
 
   return (
     <div style={{ position: 'relative', overflow: 'hidden', width: imageWidth, height: imageHeight }}>
-      {/* SVG pour le filtre */}
       <svg
+        className="z-10"
         fill="none"
         preserveAspectRatio="xMidYMin slice"
         viewBox={`0 0 ${imageWidth} ${imageHeight}`}
@@ -39,47 +41,30 @@ export default function ImageTransition({ src, alt }: ImageTransitionTypes) {
       >
         <defs>
           <filter id="displacementFilter">
-            <feTurbulence type="fractalNoise" baseFrequency="0.005" numOctaves="1" result="noise" />
-            <feDisplacementMap
-              in="SourceGraphic"
-              in2="noise"
-              scale="20" // Ajuste cette valeur pour contrôler l'effet de turbulence
-              xChannelSelector="R"
-              yChannelSelector="G"
-            />
+            <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="1" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale={200} xChannelSelector="R" yChannelSelector="G" />
           </filter>
           <mask id="circleMask">
             <motion.circle
+              className={'displacement'}
               fill="white"
-              cx={imageWidth / 2} // Centre du cercle
-              cy={imageHeight / 2} // Centre du cercle
-              r={r} // Rayon initial
+              cx={imageWidth / 2}
+              cy={imageHeight / 2}
+              r={r}
               variants={circleVariants}
               initial="initial"
-              animate={imageLoaded ? 'animate' : 'initial'} // Anime quand l'image est chargée
+              animate="animate"
               exit="exit"
               transition={circleTransition}
             />
           </mask>
         </defs>
-        <rect fill="#1c1c1c" width="100%" height="100%" mask="url(#circleMask)" />
+        <rect fill="#0A0A0A" width="100%" height="100%" mask="url(#circleMask)" />
       </svg>
 
-      {/* Image avec le filtre */}
-      <motion.img
-        src={src}
-        alt={alt}
-        style={{
-          filter: 'url(#displacementFilter)',
-          position: 'relative',
-          opacity: imageLoaded ? 1 : 0,
-          transition: 'opacity 0.75s ease-in-out',
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-        }}
-        onLoad={() => setImageLoaded(true)} // L'image devient visible une fois chargée
-      />
+      <div style={{ width: '100%', height: '100%' }}>
+        <Image src={src} alt={alt} layout="fill" objectFit="cover" />
+      </div>
     </div>
   );
 }
