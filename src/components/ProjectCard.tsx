@@ -38,30 +38,43 @@ export default function ProjectCard({ className, id }: ProjectCardType) {
     >
       <ImageTransition src={'/placeholder.jpg'} alt="exemple" inView={isInView} id={id} />
 
-      <motion.div
-        className="font-dot flex justify-between"
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 0.5, y: 0 },
-        }}
-        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 }}
-      >
-        <time dateTime="2024">[ 2024 ]</time>
-        <span>[ Wordpress | Javascript ]</span>
-      </motion.div>
+      <div className="font-dot flex justify-between overflow-hidden">
+        <motion.time
+          dateTime="2024"
+          variants={{
+            hidden: { opacity: 0.5, y: 20 },
+            visible: { opacity: 0.5, y: 0 },
+          }}
+          transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.75 }}
+        >
+          [ 2024 ]
+        </motion.time>
+        <motion.span
+          variants={{
+            hidden: { opacity: 0.5, y: 30 },
+            visible: { opacity: 0.5, y: 0 },
+          }}
+          transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.75 }}
+        >
+          [ Wordpress | Javascript ]
+        </motion.span>
+      </div>
 
-      <motion.h4
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.75 }}
-      >
-        <Link href={'#'} className="flex items-center gap-4 w-fit text-xl font-medium">
-          Lorem Ipsum{' '}
-          <Image src={arrowIcon} className="-rotate-45" width={16} height={16} alt="Arrow icon" aria-hidden />{' '}
+      <h4 className="overflow-hidden">
+        <Link href={'#'} className="text-xl font-medium overflow-hidden">
+          <motion.span
+            className="flex items-center gap-4 w-fit"
+            variants={{
+              hidden: { y: 30 },
+              visible: { y: 0 },
+            }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 1 }}
+          >
+            Lorem Ipsum{' '}
+            <Image src={arrowIcon} className="-rotate-45" width={16} height={16} alt="Arrow icon" aria-hidden />{' '}
+          </motion.span>
         </Link>
-      </motion.h4>
+      </h4>
     </motion.article>
   );
 }
