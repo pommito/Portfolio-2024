@@ -21,7 +21,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col min-h-screen max-h py-20">
-        <h3 className="font-dot text-6xl h-fit mb-32">Selected project</h3>
+        <h3 className="font-dot text-6xl h-fit mt-32">Selected project</h3>
         <div className="grid grid-cols-2 auto-rows-auto gap-8 w-full">
           <ProjectCard className="mt-40" id={1} />
           <ProjectCard className="justify-self-end" id={2} />

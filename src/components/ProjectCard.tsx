@@ -16,7 +16,7 @@ type ProjectCardType = {
 export default function ProjectCard({ className, id }: ProjectCardType) {
   const articleRef = useRef(null);
   const mainControls = useAnimation();
-  const isInView = useInView(articleRef, { once: true, amount: 0.5 });
+  const isInView = useInView(articleRef, { once: true, amount: 0.75 });
 
   useEffect(() => {
     if (isInView) {

@@ -21,9 +21,9 @@ export default function ImageTransition({ src, alt, inView, id }: ImageTransitio
   );
 
   const circleVariants = {
-    hidden: { r: r },
-    visible: { r: 0 },
-    exit: { r: 0 },
+    hidden: { r: 0 },
+    visible: { r: r },
+    exit: { r: r },
   };
 
   const circleTransition = {
@@ -40,15 +40,23 @@ export default function ImageTransition({ src, alt, inView, id }: ImageTransitio
   return (
     <div style={{ position: 'relative', overflow: 'hidden', width: imageWidth, height: imageHeight }}>
       <svg
-        className="z-10"
+        className="z-10 pointer-events-none"
         fill="none"
         preserveAspectRatio="xMidYMin slice"
         viewBox={`0 0 ${imageWidth} ${imageHeight}`}
         style={{ position: 'absolute', top: 0, left: 0 }}
       >
         <defs>
+          <pattern id={`imagePattern-${id}`} patternUnits="objectBoundingBox" width="1" height="1">
+            <image
+              href="/placeholder.jpg"
+              width={imageWidth}
+              height={imageHeight}
+              preserveAspectRatio="xMidYMid slice"
+            />
+          </pattern>
           <filter id={`displacementFilter-${id}`}>
-            <feTurbulence type="fractalNoise" baseFrequency="0.25" numOctaves="1" result="noise" />
+            <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="noise" />
             <feDisplacementMap in="SourceGraphic" in2="noise" scale={200} xChannelSelector="R" yChannelSelector="G" />
           </filter>
           <mask id={`circleMask-${id}`}>
@@ -66,12 +74,8 @@ export default function ImageTransition({ src, alt, inView, id }: ImageTransitio
             />
           </mask>
         </defs>
-        <rect fill="#0A0A0A" width="100%" height="100%" mask={`url(#circleMask-${id})`} />
+        <rect fill={`url(#imagePattern-${id})`} width="100%" height="100%" mask={`url(#circleMask-${id})`} />
       </svg>
-
-      <div>
-        <Image src={src} alt={alt} width={imageWidth} height={imageHeight} className="object-cover" />
-      </div>
     </div>
   );
 }
