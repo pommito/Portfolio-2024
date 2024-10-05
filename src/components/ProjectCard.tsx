@@ -24,13 +24,13 @@ export default function ProjectCard({ className }: ProjectCardType) {
 
   return (
     <article ref={articleRef} className={`flex flex-col gap-3 w-[450px] ${className}`}>
-      <ImageTransition src={'/placeholder.jpg'} alt="exemple" />
+      <ImageTransition src={'/placeholder.jpg'} alt="exemple" inView={isInView} />
 
       <motion.div
         className="font-dot flex justify-between"
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 0.5, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut', delay: 1.25 }}
+        animate={isInView ? { opacity: 0.5, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.5 }}
       >
         <time dateTime="2024">[ 2024 ]</time>
         <span>[ Wordpress | Javascript ]</span>
@@ -38,8 +38,8 @@ export default function ProjectCard({ className }: ProjectCardType) {
 
       <motion.h4
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut', delay: 1.5 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.75 }}
       >
         <Link href={'#'} className="flex items-center gap-4 w-fit text-xl font-medium">
           Lorem Ipsum{' '}

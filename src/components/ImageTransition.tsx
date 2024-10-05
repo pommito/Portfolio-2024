@@ -1,15 +1,14 @@
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 type ImageTransitionTypes = {
   src: string;
   alt: string;
+  inView: boolean;
 };
 
-export default function ImageTransition({ src, alt }: ImageTransitionTypes) {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
+export default function ImageTransition({ src, alt, inView }: ImageTransitionTypes) {
   const imageWidth = 450;
   const imageHeight = 300;
 
@@ -52,7 +51,7 @@ export default function ImageTransition({ src, alt }: ImageTransitionTypes) {
               r={r}
               variants={circleVariants}
               initial="initial"
-              animate="animate"
+              animate={inView ? 'animate' : 'initial'}
               exit="exit"
               transition={circleTransition}
             />
