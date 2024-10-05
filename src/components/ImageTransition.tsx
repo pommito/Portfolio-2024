@@ -26,7 +26,6 @@ export default function ImageTransition({ src, alt }: ImageTransitionTypes) {
 
   const circleTransition = {
     duration: 1.25,
-    delay: 0.3,
     ease: [0.45, 1, 0.36, 1],
   };
 
