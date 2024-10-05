@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 import downloadIcon from '../../public/download.svg';
 import ResumeListItem from '@/components/ResumeListItem';
+import ProjectCard from '@/components/ProjectCard';
 
 import { workExperiences, educations } from '@/data/resume';
-import ProjectCard from '@/components/ProjectCard';
 
 export default function Home() {
   return (
@@ -21,11 +21,9 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col min-h-screen max-h py-20">
-        <h3 className="font-dot text-6xl h-fit mb-20">Selected project</h3>
-        <div className="grid grid-cols-2 auto-rows-auto gap-20 w-full border border-red-500">
-          <ProjectCard />
-          <ProjectCard className={'justify-self-end'} />
-          <ProjectCard />
+        <h3 className="font-dot text-6xl h-fit mb-32">Selected project</h3>
+        <div className="grid grid-cols-2 auto-rows-auto gap-8 w-full">
+          <ProjectCard className="" />
         </div>
       </section>
 
