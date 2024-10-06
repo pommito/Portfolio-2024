@@ -33,7 +33,7 @@ export default function TextReveal({ text, delay = 0, amountInView = 0.75 }: Tex
               hidden: { y: '100%' },
               visible: {
                 y: '0%',
-                transition: { duration: 0.6, delay: delay + 0.2 * index, ease: [0.45, 1, 0.36, 1] },
+                transition: { duration: 0.6, delay: delay + 0.2 * index, ease: 'easeOut' },
               },
             }}
             initial="hidden"

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import AnimatedLink from './animations/AnimatedLink';
+import TextReveal from './animations/TextReveal';
 
 export default function Footer() {
   return (
@@ -23,7 +24,7 @@ export default function Footer() {
         </li>
       </ul>
       <Link href="mailto:victor.lebecq.pro@gmail.com" className="text-[4vw] font-normal">
-        victor.lebecq.pro@gmail.com
+        <TextReveal text="victor.lebecq.pro@gmail.com" amountInView={1} />
       </Link>
       <div className="text-[#f1f1f1]/50 text-sm flex justify-between pt-6 w-full border-t border-[#f1f1f1]/20">
         <p>Made in the French Alpes</p>
