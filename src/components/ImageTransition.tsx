@@ -1,6 +1,5 @@
 import { useMemo, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import Image from 'next/image';
 
 type ImageTransitionTypes = {
   src: string;

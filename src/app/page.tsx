@@ -12,20 +12,20 @@ import { workExperiences, educations } from '@/data/resume';
 export default function Home() {
   return (
     <main className="font-pp px-4 md:px-8 lg:px-20">
-      <section className="flex flex-col h-screen max-h md:py-20">
-        <h2 className="font-dot text-5xl mt-[20vh] overflow-hidden lg:text-[8.5vw]">
+      <section className="flex flex-col justify-end h-[100dvh] max-h py-20">
+        <h2 className="font-dot text-2xl mt-[20vh] overflow-hidden sm:text-[8.5vw] sm:leading-[100%]">
           <TextReveal text="Victor Lebecq" />
         </h2>
-        <h1 className="text-5xl ml-20 overflow-hidden lg:text-[8.5vw]">
-          <TextReveal text="Front end developer" delay={0.5} />
+        <h1 className="text-4xl overflow-hidden  md:ml-20 sm:text-[8.5vw] sm:leading-[100%]">
+          <TextReveal text="Front end Developer" delay={0.5} />
         </h1>
-        <p className="leading-[150%] ml-auto mt-auto text-right md:text-xl w-[650px]">
+        <p className="leading-[150%]  text-left text-xl mt-4 w-[90%] md:mt-auto md:ml-auto  lg:text-right lg:w-[650px]">
           <TextReveal text={firstParagraph} delay={0.85} />
         </p>
       </section>
 
-      <section className="flex flex-col min-h-screen max-h py-20">
-        <h3 className="font-dot text-6xl h-fit mt-32">Selected project</h3>
+      <section className="flex flex-col min-h-screen py-20">
+        <h3 className="font-dot text-3xl h-fit md:mt-32 md:text-6xl">Selected project</h3>
         <div className="grid grid-cols-1 auto-rows-auto gap-8 w-full sm:grid-cols-2">
           <ProjectCard className="lg:mt-40" id={1} />
           <ProjectCard className="lg:justify-self-end" id={2} />
