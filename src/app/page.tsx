@@ -7,8 +7,13 @@ import ProjectCard from '@/components/ProjectCard';
 import TextRevealAnimation from '@/components/animations/TextRevealAnimation';
 
 import { workExperiences, educations } from '@/data/resume';
+import ParagraphRevealAnimation from '@/components/animations/ParagraphRevealAnimation';
 
 export default function Home() {
+  const testP = `I’m a 24 years old developer based in France who likes to work with React,
+  Wordpress, and Laravel. With a keen eye for design, I love crafting immersive
+  and scalable experiences on the web. Together, let’s bring your projects to life.`;
+
   return (
     <main className="font-pp px-20">
       <section className="flex flex-col h-screen max-h py-20">
@@ -19,9 +24,7 @@ export default function Home() {
           <TextRevealAnimation text="Front end developer" delay={0.5} />
         </h1>
         <p className="leading-[150%] ml-auto mt-auto text-right text-xl w-[650px]">
-          I’m a 24 years old developer based in France who likes to work with <b>React</b>, <b>Wordpress</b>, and{' '}
-          <b>Laravel</b>. With a keen eye for design, I love crafting immersive and scalable experiences on the web.
-          Together, let’s bring your projects to life.
+          <ParagraphRevealAnimation text={testP} />
         </p>
       </section>
 
