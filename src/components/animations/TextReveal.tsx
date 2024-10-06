@@ -4,12 +4,12 @@ import { useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { SplitTextToLines } from '@/utils/SplitTextToLines';
 
-type ParagraphRevealAnimationTypes = {
+type TextRevealTypes = {
   text: string;
   delay?: number;
 };
 
-export default function ParagraphRevealAnimation({ text, delay = 0 }: ParagraphRevealAnimationTypes) {
+export default function TextReveal({ text, delay = 0 }: TextRevealTypes) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.75 });
   const linesArray = SplitTextToLines(text);
