@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import AnimatedLink from './AnimatedLink';
+import AnimatedLink from './animations/AnimatedLink';
 
 export default function Footer() {
   return (
