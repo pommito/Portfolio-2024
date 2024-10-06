@@ -4,9 +4,9 @@ import TextReveal from './animations/TextReveal';
 
 export default function Footer() {
   return (
-    <footer className="font-pp flex flex-col items-center leading-tight gap-16 px-20 py-6">
+    <footer className="font-pp flex flex-col items-center leading-tight gap-16 px-4 md:px-20 py-6">
       <h2 className="text-[9.5vw]">Let&apos;s craft projects</h2>
-      <ul className="font-dot flex justify-between text-xl w-3/4">
+      <ul className="font-dot flex flex-col justify-between text-xl w-3/4 sm:flex-row">
         <li>
           <AnimatedLink title="[ Github ]" url="https://github.com/pommito" />
         </li>
