@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { useAnimate, motion, stagger } from 'framer-motion';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { SplitTextToLines } from '@/utils/SplitTextToLines';
 
 type ParagraphRevealAnimationTypes = {
@@ -9,34 +9,29 @@ type ParagraphRevealAnimationTypes = {
   delay?: number;
 };
 
-export default function ParagraphRevealAnimation({ text, delay }: ParagraphRevealAnimationTypes) {
-  const [lines, setLines] = useState<string[]>([]);
-
+export default function ParagraphRevealAnimation({ text, delay = 0 }: ParagraphRevealAnimationTypes) {
   const linesArray = SplitTextToLines(text);
 
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.25,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const child = {
-    hidden: { y: '100%' },
-    visible: { y: '0%' },
-  };
-
   return (
-    <motion.span className="block overflow-hidden" variants={container} initial="hidden" animate="visible">
+    <>
       {linesArray.map((line, index) => (
-        <motion.span key={index} className="block overflow-hidden" variants={child}>
-          {line}
-        </motion.span>
+        <span key={index} className="block overflow-hidden">
+          <motion.span
+            className="block overflow-hidden"
+            variants={{
+              hidden: { y: '100%' },
+              visible: {
+                y: '0%',
+                transition: { duration: 0.4, delay: delay + 0.25 * index, ease: [0.45, 1, 0.36, 1] },
+              },
+            }}
+            initial="hidden"
+            animate="visible"
+          >
+            {line}
+          </motion.span>
+        </span>
       ))}
-    </motion.span>
+    </>
   );
 }
