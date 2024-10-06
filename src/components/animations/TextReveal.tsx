@@ -7,11 +7,12 @@ import { SplitTextToLines } from '@/utils/SplitTextToLines';
 type TextRevealTypes = {
   text: string;
   delay?: number;
+  amountInView?: number;
 };
 
-export default function TextReveal({ text, delay = 0 }: TextRevealTypes) {
+export default function TextReveal({ text, delay = 0, amountInView = 0.75 }: TextRevealTypes) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.75 });
+  const isInView = useInView(ref, { once: true, amount: amountInView });
   const linesArray = SplitTextToLines(text);
 
   const controls = useAnimation();

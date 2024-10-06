@@ -37,7 +37,7 @@ export default function Home() {
       <section className="py-20">
         <h3 className="font-dot text-6xl mb-20">About me</h3>
         <p className="leading-[150%] text-xl">
-          <TextReveal text={secondParagraph} />
+          <TextReveal text={secondParagraph} amountInView={1} />
         </p>
 
         <h4 className="font-dot opacity-50 mt-20 mb-4">[ Work Experiences ]</h4>
