@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SplitTextToLines } from '@/utils/SplitTextToLines';
 
@@ -22,7 +21,7 @@ export default function ParagraphRevealAnimation({ text, delay = 0 }: ParagraphR
               hidden: { y: '100%' },
               visible: {
                 y: '0%',
-                transition: { duration: 0.4, delay: delay + 0.25 * index, ease: [0.45, 1, 0.36, 1] },
+                transition: { duration: 0.6, delay: delay + 0.3 * index, ease: [0.45, 1, 0.36, 1] },
               },
             }}
             initial="hidden"
