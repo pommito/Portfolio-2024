@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <motion.header
-      className="absolute flex flex-row font-pp items-center justify-between  px-20 py-6 w-full"
+      className="absolute flex flex-row font-pp items-center justify-between  px-4 py-4 w-full md:px-8 lg:px-20"
       variants={headerVariants}
       initial="hidden"
       animate="visible"
@@ -30,7 +30,7 @@ export default function Header() {
         <Image src={`/Logo_3D.png`} alt="This is my logo" width={40} height={40}></Image>
       </Link>
       <nav>
-        <ul className="font-dot flex flex-row gap-12">
+        <ul className="font-dot text-sm flex flex-row   gap-4 md:gap-8 lg:gap-12">
           <li>
             <AnimatedLink title="[ Works ]" url="/works" />
           </li>
