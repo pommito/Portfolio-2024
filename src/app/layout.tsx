@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+
 import Header from '@/components/Header';
 import Grid from '@/components/Grid';
 import Footer from '@/components/Footer';
+import SmoothScroll from '@/components/animations/SmoothScroll';
 
 const dotemp8bit = localFont({
   src: './fonts/Dotemp-8bit.woff',
@@ -56,10 +58,12 @@ export default function RootLayout({
       <body
         className={`${dotemp8bit.variable} ${ppNeueMontrealBook.variable} ${ppNeueMontreal.variable} antialiased relative mx-auto max-w-[1920px] `}
       >
-        <Grid />
-        <Header />
-        {children}
-        <Footer />
+        <SmoothScroll>
+          <Grid />
+          <Header />
+          {children}
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

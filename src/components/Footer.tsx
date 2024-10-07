@@ -27,7 +27,7 @@ export default function Footer() {
         <TextReveal text="victor.lebecq.pro@gmail.com" amountInView={1} />
       </Link>
       <div className="text-[#f1f1f1]/50 text-sm flex justify-between pt-6 w-full border-t border-[#f1f1f1]/20">
-        <p>Made in the French Alpes</p>
+        <p>Made in the French Alps</p>
         <p>Copyright © 2024 All rights reserved</p>
       </div>
     </footer>
