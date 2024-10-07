@@ -56,3 +56,9 @@ export const works: worksType[] = [
     url: 'https://immo-lyon7.fr',
   },
 ];
+
+export const paragraph = `
+These is the full list of all the projects i’ve been working on as a developer.
+Here you can find the link to the live website and the source code if the
+project is open source. Feel free to browse those projects.
+`;

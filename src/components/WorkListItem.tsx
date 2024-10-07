@@ -1,23 +1,61 @@
+'use client';
+
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-import { worksType } from '@/data/works';
 
 import eyeIcon from '../../public/eye.svg';
 import eyeOffIcon from '../../public/eyeOff.svg';
 import githubIcon from '../../public/github.svg';
 
+import { worksType } from '@/data/works';
+
 type WorkListItemPropsType = worksType;
 
 export default function WorkListItem({ title, techs, date, url, githubUrl }: WorkListItemPropsType) {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        const [entry] = entries;
+
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        root: null,
+        threshold: 1,
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
-    <li className="flex justify-between items-center py-4 border-b border-[#f1f1f1]/20">
+    <li
+      ref={ref}
+      className={`relative flex justify-between items-center py-4 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:transform before:-translate-x-1/2 before:w-full before:h-[1px] before:bg-[#f1f1f1]/20 before:transition-transform before:duration-[1500ms] before:origin-center ease-in-out ${
+        isVisible ? 'before:scale-x-100' : 'before:scale-x-0'
+      }`}
+    >
       <div className="flex flex-col w-2/5">
         <h5 className="text-xl font-medium">{title}</h5>
         <span className="font-dot text-sm opacity-50">{techs}</span>
       </div>
       <span className="font-pp text-xl opacity-50 w-1/5">{date}</span>
-      <div className="flex gap-6 w-1/5 justify-end">
+      <div className="flex gap-6 w-1/5 justify-end items-center">
         {githubUrl && (
           <Link href={githubUrl}>
             <Image src={githubIcon} alt="github icon that redirect to the source code of the project" aria-hidden />

@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 
 type ResumeListItemPropsType = experienceType;
 
-export default function ResumeListItem({ title, date, company, techs, index }: ResumeListItemPropsType) {
+export default function ResumeListItem({ title, date, company, techs }: ResumeListItemPropsType) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLLIElement>(null);
 
