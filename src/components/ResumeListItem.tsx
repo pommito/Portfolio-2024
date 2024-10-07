@@ -43,12 +43,14 @@ export default function ResumeListItem({ title, date, company, techs }: ResumeLi
         isVisible ? 'before:scale-x-100' : 'before:scale-x-0'
       }`}
     >
-      <div className="flex flex-col gap-1 w-2/5">
-        <h5 className="text-xl font-medium">{title}</h5>
-        <span className="font-dot text-sm opacity-50">{date}</span>
+      <div className="flex flex-col gap-1 w-1/2 md:w-1/3">
+        <h5 className="text-sm font-medium sm:text-xl">{title}</h5>
+        <span className="font-dot text-[0.65rem] sm:text-sm opacity-50">{date}</span>
       </div>
-      <h6 className="font-pp text-xl opacity-50 w-1/5">{company}</h6>
-      <h6 className="text-xl text-right w-2/5">{techs}</h6>
+      <div className="flex flex-col items-end gap-1 w-1/2 md:w-2/3 md:flex-row md:justify-between">
+        <h6 className="font-pp text-sm  opacity-50 sm:text-xl md:text-center md:w-1/2">{company}</h6>
+        <h6 className="text-xs sm:text-xl md:w-1/2 md:text-right">{techs}</h6>
+      </div>
     </li>
   );
 }
