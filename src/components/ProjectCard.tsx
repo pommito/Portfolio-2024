@@ -20,7 +20,6 @@ export default function ProjectCard({ className, id }: ProjectCardType) {
 
   useEffect(() => {
     if (isInView) {
-      console.log('trigger');
       mainControls.start('visible');
     }
   }, [isInView, mainControls]);
