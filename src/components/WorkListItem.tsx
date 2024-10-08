@@ -51,24 +51,34 @@ export default function WorkListItem({ title, techs, date, url, githubUrl }: Wor
       }`}
     >
       <div className="flex flex-col w-2/5">
-        <h5 className="text-xl font-medium">{title}</h5>
-        <span className="font-dot text-sm opacity-50">{techs}</span>
+        <h5 className="text-sm font-medium sm:text-xl">{title}</h5>
+        <span className="font-dot text-[0.65rem] opacity-50 sm:text-sm">{techs}</span>
       </div>
-      <span className="font-pp text-xl opacity-50 w-1/5">{date}</span>
+      <span className="font-pp text-sm opacity-50 w-1/5 sm:text-xl">{date}</span>
       <div className="flex gap-6 w-1/5 justify-end items-center">
         {githubUrl && (
           <Link href={githubUrl}>
-            <Image src={githubIcon} alt="github icon that redirect to the source code of the project" aria-hidden />
+            <Image
+              className="size-5 sm:size-6"
+              src={githubIcon}
+              alt="github icon that redirect to the source code of the project"
+              aria-hidden
+            />
           </Link>
         )}
         {url && url.length > 0 ? (
           <Link href={url}>
-            <Image src={eyeIcon} alt="eye icon that redirect to the live project website" aria-hidden />
+            <Image
+              className="size-5 sm:size-6"
+              src={eyeIcon}
+              alt="eye icon that redirect to the live project website"
+              aria-hidden
+            />
           </Link>
         ) : (
           <Image
             src={eyeOffIcon}
-            className="opacity-50"
+            className="opacity-50 size-5 sm:size-6"
             alt="eye off icon that show to the user that the project is no longer live"
             aria-hidden
           />

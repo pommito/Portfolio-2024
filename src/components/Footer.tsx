@@ -23,7 +23,10 @@ export default function Footer() {
           <AnimatedLink title="[ Malt ]" url="https://www.malt.fr/profile/victorlebecq" />
         </li>
       </ul>
-      <Link href="mailto:victor.lebecq.pro@gmail.com" className="text-2xl  sm:text-3xl md:text-[4vw] font-normal">
+      <Link
+        href="mailto:victor.lebecq.pro@gmail.com"
+        className="text-2xl sm:text-3xl md:text-[4vw] md:leading-tight font-normal"
+      >
         <TextReveal text="victor.lebecq.pro@gmail.com" amountInView={1} />
       </Link>
       <div className="text-[#f1f1f1]/50 text-sm flex flex-col justify-between pt-6 w-full border-t border-[#f1f1f1]/20 sm:flex-row">

@@ -1,9 +1,9 @@
 import { useMemo, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { delay, motion, useAnimation } from 'framer-motion';
 
 type ImageTransitionTypes = {
   src: string;
-  alt: string;
+  alt?: string;
   inView: boolean;
   id: number;
 };
