@@ -52,8 +52,8 @@ export default function Home() {
             <ResumeListItem key={index} {...exp} />
           ))}
         </ul>
-        <Link href={'#'} className="flex items-center justify-center gap-2 mt-20 mx-auto w-fit">
-          <span className="font-dot text-xl">Download my resume</span>
+        <Link href={'#'} className="flex items-center justify-center gap-2 mt-8  mx-auto w-fit md:mt-20">
+          <span className="font-dot md:text-xl">Download my resume</span>
           <Image src={downloadIcon} alt="icon in the button for downloading resume" aria-hidden />
         </Link>
       </section>
