@@ -30,7 +30,7 @@ export default function ImageTransition({ src, alt, inView, id }: ImageTransitio
     ease: [0.45, 1, 0.36, 1],
   };
 
-  useEffect(() => {
+  useMemo(() => {
     if (inView) {
       controls.start('visible');
     }
