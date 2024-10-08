@@ -37,9 +37,9 @@ export default function ImageTransition({ src, alt, inView, id }: ImageTransitio
   }, [inView, controls]);
 
   return (
-    <div className="relative overflow-hidden w-full md:w-[450px]" style={{ height: imageHeight }}>
+    <div className="relative overflow-hidden w-[full] aspect-[3/2] md:w-[450px]">
       <svg
-        className="z-10 pointer-events-none"
+        className="z-10 w-full h-full pointer-events-none"
         fill="none"
         preserveAspectRatio="xMidYMin slice"
         viewBox={`0 0 ${imageWidth} ${imageHeight}`}
@@ -47,7 +47,7 @@ export default function ImageTransition({ src, alt, inView, id }: ImageTransitio
       >
         <defs>
           <pattern id={`imagePattern-${id}`} patternUnits="objectBoundingBox" width="1" height="1">
-            <image href="/placeholder.jpg" width={'100%'} height={'100%'} preserveAspectRatio="xMidYMid slice" />
+            <image href={src} width={'100%'} height={'100%'} preserveAspectRatio="xMidYMid slice" />
           </pattern>
           <filter id={`displacementFilter-${id}`}>
             <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="noise" />
