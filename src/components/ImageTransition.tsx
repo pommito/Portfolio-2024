@@ -37,7 +37,7 @@ export default function ImageTransition({ src, alt, inView, id }: ImageTransitio
   }, [inView, controls]);
 
   return (
-    <div className="relative overflow-hidden w-[full] aspect-[3/2] md:w-[450px]">
+    <div className="relative overflow-hidden w-[full] aspect-[3/2] lg:w-[450px]">
       <svg
         className="z-10 w-full h-full pointer-events-none"
         fill="none"
