@@ -27,7 +27,7 @@ export default function ProjectCard({ title, image, techs, date, url, className,
   return (
     <motion.article
       ref={articleRef}
-      className={`flex flex-col gap-3 w-full md:w-4/5 ${className} lg:w-[450px] `}
+      className={`flex flex-col gap-3 w-full md:w-4/5 lg:w-[450px] ${className || ''}`}
       initial="hidden"
       animate={mainControls}
       variants={{
