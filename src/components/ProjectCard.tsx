@@ -37,7 +37,7 @@ export default function ProjectCard({ className, id }: ProjectCardType) {
     >
       <ImageTransition src={'/placeholder.jpg'} alt="exemple" inView={isInView} id={id} />
 
-      <div className="font-dot flex justify-between overflow-hidden">
+      <div className="font-dot text-sm flex justify-between overflow-hidden">
         <motion.time
           dateTime="2024"
           variants={{
