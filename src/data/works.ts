@@ -36,6 +36,7 @@ export const works: worksType[] = [
     title: 'WePeak',
     techs: '[ React | Redux | Symfony ]',
     date: '2024',
+    githubUrl: 'https://github.com/O-clock-Jelly/projet-06-we-peak-front',
   },
   {
     title: 'Chambéry Savoie Football',
