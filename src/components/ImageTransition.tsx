@@ -1,5 +1,5 @@
-import { useMemo, useEffect } from 'react';
-import { delay, motion, useAnimation } from 'framer-motion';
+import { useMemo } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
 type ImageTransitionTypes = {
   src: string;
@@ -8,7 +8,7 @@ type ImageTransitionTypes = {
   id: number;
 };
 
-export default function ImageTransition({ src, alt, inView, id }: ImageTransitionTypes) {
+export default function ImageTransition({ src, inView, id }: ImageTransitionTypes) {
   const imageWidth = 450;
   const imageHeight = 300;
 
@@ -26,8 +26,9 @@ export default function ImageTransition({ src, alt, inView, id }: ImageTransitio
   };
 
   const circleTransition = {
-    duration: 1.25,
-    ease: [0.45, 1, 0.36, 1],
+    duration: 1.2,
+    ease: 'easeOut',
+    type: 'tween',
   };
 
   useMemo(() => {

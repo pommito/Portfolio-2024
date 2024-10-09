@@ -16,6 +16,8 @@ export default function ProjectCard({ title, image, techs, date, url, className,
   const mainControls = useAnimation();
   const isInView = useInView(articleRef, { once: true, amount: 0.75 });
 
+  console.log(className);
+
   useEffect(() => {
     if (isInView) {
       mainControls.start('visible');
@@ -25,7 +27,7 @@ export default function ProjectCard({ title, image, techs, date, url, className,
   return (
     <motion.article
       ref={articleRef}
-      className={`flex flex-col gap-3 w-full md:w-4/5 lg:w-[450px] ${className}`}
+      className={`flex flex-col gap-3 w-full md:w-4/5 ${className} lg:w-[450px] `}
       initial="hidden"
       animate={mainControls}
       variants={{
@@ -35,12 +37,12 @@ export default function ProjectCard({ title, image, techs, date, url, className,
     >
       <ImageTransition src={image} alt="exemple" inView={isInView} id={id} />
 
-      <div className="font-dot text-sm flex justify-between overflow-hidden">
+      <div className="font-dot text-sm flex justify-between overflow-hidden opacity-50">
         <motion.time
           dateTime="2024"
           variants={{
-            hidden: { opacity: 0.5, y: 20 },
-            visible: { opacity: 0.5, y: 0 },
+            hidden: { y: 20 },
+            visible: { y: 0 },
           }}
           transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.75 }}
         >
@@ -48,8 +50,8 @@ export default function ProjectCard({ title, image, techs, date, url, className,
         </motion.time>
         <motion.span
           variants={{
-            hidden: { opacity: 0.5, y: 30 },
-            visible: { opacity: 0.5, y: 0 },
+            hidden: { y: 30 },
+            visible: { y: 0 },
           }}
           transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.75 }}
         >
