@@ -5,15 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useAnimation, useInView } from 'framer-motion';
 
+import { projectType } from '@/data/home';
 import arrowIcon from '@/../public/arrow.svg';
 import ImageTransition from './ImageTransition';
 
-type ProjectCardType = {
-  className?: string;
-  id: number;
-};
+type ProjectCardType = projectType;
 
-export default function ProjectCard({ className, id }: ProjectCardType) {
+export default function ProjectCard({ title, image, techs, date, url, className, id }: ProjectCardType) {
   const articleRef = useRef(null);
   const mainControls = useAnimation();
   const isInView = useInView(articleRef, { once: true, amount: 0.75 });
@@ -35,7 +33,7 @@ export default function ProjectCard({ className, id }: ProjectCardType) {
         visible: {},
       }}
     >
-      <ImageTransition src={'/placeholder.jpg'} alt="exemple" inView={isInView} id={id} />
+      <ImageTransition src={image} alt="exemple" inView={isInView} id={id} />
 
       <div className="font-dot text-sm flex justify-between overflow-hidden">
         <motion.time
@@ -46,7 +44,7 @@ export default function ProjectCard({ className, id }: ProjectCardType) {
           }}
           transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.75 }}
         >
-          [ 2024 ]
+          {date}
         </motion.time>
         <motion.span
           variants={{
@@ -55,12 +53,12 @@ export default function ProjectCard({ className, id }: ProjectCardType) {
           }}
           transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.75 }}
         >
-          [ Wordpress | Javascript ]
+          {techs}
         </motion.span>
       </div>
 
       <h4 className="overflow-hidden">
-        <Link href={'#'} className="text-xl font-medium overflow-hidden">
+        <Link href={url} className="text-xl font-medium overflow-hidden" target="_blank">
           <motion.span
             className="flex items-center gap-4 w-fit"
             variants={{
@@ -69,8 +67,7 @@ export default function ProjectCard({ className, id }: ProjectCardType) {
             }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 1 }}
           >
-            Lorem Ipsum{' '}
-            <Image src={arrowIcon} className="-rotate-45" width={16} height={16} alt="Arrow icon" aria-hidden />{' '}
+            {title} <Image src={arrowIcon} className="-rotate-45" width={16} height={16} alt="Arrow icon" aria-hidden />{' '}
           </motion.span>
         </Link>
       </h4>

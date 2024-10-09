@@ -6,7 +6,7 @@ import ResumeListItem from '@/components/ResumeListItem';
 import ProjectCard from '@/components/ProjectCard';
 import TextReveal from '@/components/animations/TextReveal';
 
-import { firstParagraph, secondParagraph } from '@/data/home';
+import { projects, firstParagraph, secondParagraph } from '@/data/home';
 import { workExperiences, educations } from '@/data/resume';
 
 export default function Home() {
@@ -27,10 +27,9 @@ export default function Home() {
       <section className="flex flex-col min-h-screen py-20">
         <h3 className="font-dot text-3xl h-fit md:mt-32 mb-16 sm:mb-0 md:text-6xl">Selected project</h3>
         <div className="grid grid-cols-1 auto-rows-auto gap-12 md:gap-16 w-full sm:grid-cols-2">
-          <ProjectCard className="md:mt-20 lg:mt-40" id={1} />
-          <ProjectCard className="md:justify-self-end" id={2} />
-          <ProjectCard className="md:mt-20 lg:mt-40" id={3} />
-          <ProjectCard className="md:justify-self-end" id={4} />
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
         </div>
       </section>
 
