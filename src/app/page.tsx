@@ -6,7 +6,7 @@ import ResumeListItem from '@/components/ResumeListItem';
 import ProjectCard from '@/components/ProjectCard';
 import TextReveal from '@/components/animations/TextReveal';
 
-import { projects, firstParagraph, secondParagraph } from '@/data/home';
+import { projects, firstParagraph, secondParagraph, technos } from '@/data/home';
 import { workExperiences, educations } from '@/data/resume';
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col min-h-screen py-20">
-        <h3 className="font-dot text-3xl h-fit md:mt-32 mb-16 sm:mb-0 md:text-6xl">Selected project</h3>
+        <h3 className="font-dot text-3xl h-fit md:mt-32 mb-16 sm:mb-8 md:text-6xl">Selected project</h3>
         <div className="grid grid-cols-1 auto-rows-auto gap-12 md:gap-16 w-full sm:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
@@ -34,18 +34,25 @@ export default function Home() {
       </section>
 
       <section className="md:py-20">
-        <h3 className="font-dot text-3xl sm:text-6xl mb-8 sm:mb-20">About me</h3>
-        <p className="leading-[150%] text-balance sm:text-xl">
+        <h3 className="font-dot text-3xl md:text-6xl mb-8 sm:mb-10">About me</h3>
+        <p className="leading-[150%] text-balance mb-10 sm:text-xl">
           <TextReveal text={secondParagraph} amountInView={1} />
         </p>
+        <p className="flex flex-wrap gap-4 md:justify-between">
+          {technos.map((techno, index) => (
+            <span key={index} className="font-dot  text-xl sm:text-2xl opacity-50">
+              {techno}
+            </span>
+          ))}
+        </p>
 
-        <h4 className="font-dot opacity-50  mt-8 sm:mt-20 mb-4">[ Work Experiences ]</h4>
+        <h4 className="font-dot opacity-50 mt-8  sm:mt-10 mb-4">[ Work Experiences ]</h4>
         <ul>
           {workExperiences.map((exp, index) => (
             <ResumeListItem key={index} {...exp} />
           ))}
         </ul>
-        <h4 className="font-dot opacity-50 mt-8 sm:mt-12 mb-4">[ Education ]</h4>
+        <h4 className="font-dot opacity-50 mt-8 sm:mt-10 mb-4">[ Education ]</h4>
         <ul>
           {educations.map((exp, index) => (
             <ResumeListItem key={index} {...exp} />

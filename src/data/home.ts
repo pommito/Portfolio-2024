@@ -55,3 +55,15 @@ export const projects: projectType[] = [
     className: 'md:justify-self-end',
   },
 ];
+
+export const technos: string[] = [
+  'React',
+  'Wordpress',
+  'Laravel',
+  'Javascript',
+  'PHP',
+  'MySQL',
+  'Redux',
+  'Tailwind',
+  'ThreeJS',
+];
