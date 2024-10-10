@@ -26,7 +26,7 @@ export default function ImageTransition({ src, inView, id }: ImageTransitionType
   };
 
   const circleTransition = {
-    duration: 1.2,
+    duration: 1.15,
     ease: 'easeOut',
     type: 'tween',
   };

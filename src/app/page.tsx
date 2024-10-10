@@ -40,7 +40,7 @@ export default function Home() {
         </p>
         <p className="flex flex-wrap gap-4 md:justify-between">
           {technos.map((techno, index) => (
-            <span key={index} className="font-dot  text-xl sm:text-2xl opacity-50">
+            <span key={index} className="font-dot text-xl sm:text-2xl opacity-50">
               {techno}
             </span>
           ))}

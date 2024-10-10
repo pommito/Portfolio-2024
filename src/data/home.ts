@@ -14,7 +14,7 @@ export interface projectType {
   techs: string;
   date: string;
   url: string;
-  className: string;
+  style: string;
 }
 
 export const projects: projectType[] = [
@@ -25,7 +25,7 @@ export const projects: projectType[] = [
     techs: '[ Wordpress | Javascript ]',
     date: '[ 2024 ]',
     url: 'https://gastini.fr',
-    className: 'md:mt-20 lg:mt-40',
+    style: 'md:mt-20 lg:mt-40',
   },
   {
     id: 1,
@@ -34,7 +34,7 @@ export const projects: projectType[] = [
     techs: '[ Wordpress | Javascript ]',
     date: '[ 2024 ]',
     url: 'https://gaitoni-plomberie.com',
-    className: 'md:justify-self-end',
+    style: 'md:justify-self-end',
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ export const projects: projectType[] = [
     techs: '[ Wordpress | Javascript ]',
     date: '[ 2023 ]',
     url: 'https://gojura.fr',
-    className: 'md:mt-20 lg:mt-40',
+    style: 'md:mt-20 lg:mt-40',
   },
   {
     id: 3,
@@ -52,7 +52,7 @@ export const projects: projectType[] = [
     techs: '[ Wordpress | Javascript ]',
     date: '[ 2023 ]',
     url: 'https://chamberysavoiefootball.fr/',
-    className: 'md:justify-self-end',
+    style: 'md:justify-self-end',
   },
 ];
 

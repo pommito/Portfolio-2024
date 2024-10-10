@@ -11,12 +11,12 @@ import ImageTransition from './ImageTransition';
 
 type ProjectCardType = projectType;
 
-export default function ProjectCard({ title, image, techs, date, url, className, id }: ProjectCardType) {
+export default function ProjectCard({ title, image, techs, date, url, style, id }: ProjectCardType) {
   const articleRef = useRef(null);
   const mainControls = useAnimation();
   const isInView = useInView(articleRef, { once: true, amount: 0.75 });
 
-  console.log(className);
+  console.log(style);
 
   useEffect(() => {
     if (isInView) {
@@ -27,7 +27,9 @@ export default function ProjectCard({ title, image, techs, date, url, className,
   return (
     <motion.article
       ref={articleRef}
-      className={`flex flex-col gap-3 w-full md:w-4/5 lg:w-[450px] ${className || ''}`}
+      className={`flex flex-col gap-3 w-full md:w-4/5 lg:w-[450px] ${
+        id % 2 === 0 ? 'md:mt-20 lg:mt-40' : 'md:justify-self-end'
+      }`}
       initial="hidden"
       animate={mainControls}
       variants={{
