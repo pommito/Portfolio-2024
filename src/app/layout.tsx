@@ -59,7 +59,7 @@ export default function RootLayout({
         className={`${dotemp8bit.variable} ${ppNeueMontrealBook.variable} ${ppNeueMontreal.variable} antialiased relative mx-auto max-w-[1920px] `}
       >
         <SmoothScroll>
-          <Grid />
+          {/* <Grid /> */}
           <Header />
           {children}
           <Footer />
