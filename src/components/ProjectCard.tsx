@@ -16,8 +16,6 @@ export default function ProjectCard({ title, image, techs, date, url, style, id 
   const mainControls = useAnimation();
   const isInView = useInView(articleRef, { once: true, amount: 0.75 });
 
-  console.log(style);
-
   useEffect(() => {
     if (isInView) {
       mainControls.start('visible');
