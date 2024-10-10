@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { delay, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import AnimatedLink from './animations/AnimatedLink';
 
