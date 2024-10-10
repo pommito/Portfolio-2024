@@ -17,8 +17,10 @@ export default function WorkListItem({ title, techs, date, url, githubUrl }: Wor
   const ref = useRef<HTMLLIElement>(null);
 
   useEffect(() => {
+    const currentRef = ref.current;
+
     const observer = new IntersectionObserver(
-      (entries, observer) => {
+      (entries) => {
         const [entry] = entries;
 
         if (entry.isIntersecting) {
@@ -32,13 +34,13 @@ export default function WorkListItem({ title, techs, date, url, githubUrl }: Wor
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

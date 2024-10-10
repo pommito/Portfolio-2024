@@ -11,7 +11,7 @@ import ImageTransition from './ImageTransition';
 
 type ProjectCardType = projectType;
 
-export default function ProjectCard({ title, image, techs, date, url, style, id }: ProjectCardType) {
+export default function ProjectCard({ title, image, techs, date, url, id }: ProjectCardType) {
   const articleRef = useRef(null);
   const mainControls = useAnimation();
   const isInView = useInView(articleRef, { once: true, amount: 0.75 });

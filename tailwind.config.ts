@@ -18,7 +18,6 @@ const config: Config = {
       },
     },
   },
-  safelist: [{ pattern: /\[filter:url\(#displacementFilter-.*\)\]/ }],
   plugins: [],
 };
 export default config;
