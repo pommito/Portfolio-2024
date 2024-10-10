@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
 type ImageTransitionTypes = {
@@ -31,7 +31,7 @@ export default function ImageTransition({ src, inView, id }: ImageTransitionType
     type: 'tween',
   };
 
-  useMemo(() => {
+  useEffect(() => {
     if (inView) {
       controls.start('visible');
     }
@@ -43,14 +43,14 @@ export default function ImageTransition({ src, inView, id }: ImageTransitionType
         className="z-10 w-full h-full pointer-events-none"
         fill="none"
         preserveAspectRatio="xMidYMin slice"
-        viewBox={`0 0 ${imageWidth} ${imageHeight}`}
+        viewBox={`0 0 100% 100%`}
         style={{ position: 'absolute', top: 0, left: 0 }}
       >
         <defs>
           <pattern id={`imagePattern-${id}`} patternUnits="objectBoundingBox" width="1" height="1">
             <image href={src} width={'100%'} height={'100%'} preserveAspectRatio="xMidYMid slice" />
           </pattern>
-          <filter id={`displacementFilter-${id}`}>
+          <filter id={`displacementFilter-${id}`} style={{ willChange: 'filter' }}>
             <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="noise" />
             <feDisplacementMap in="SourceGraphic" in2="noise" scale={200} xChannelSelector="R" yChannelSelector="G" />
           </filter>
@@ -66,6 +66,7 @@ export default function ImageTransition({ src, inView, id }: ImageTransitionType
               animate={controls}
               exit="exit"
               transition={circleTransition}
+              style={{ willChange: 'r' }}
             />
           </mask>
         </defs>
