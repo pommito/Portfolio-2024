@@ -25,7 +25,7 @@ export default function Footer() {
       </ul>
       <Link
         href="mailto:victor.lebecq.pro@gmail.com"
-        className="text-2xl sm:text-3xl md:text-[4vw] md:leading-tight font-normal"
+        className="font-normal text-2xl sm:text-3xl md:text-[4vw] md:leading-tight"
       >
         <TextReveal text="victor.lebecq.pro@gmail.com" amountInView={1} />
       </Link>
