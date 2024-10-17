@@ -43,7 +43,7 @@ export default function ImageTransition({ src, inView, id }: ImageTransitionType
         className="z-10 w-full h-full pointer-events-none"
         fill="none"
         preserveAspectRatio="xMidYMin slice"
-        viewBox={`0 0 100% 100%`}
+        viewBox={`0 0 300 300`}
         style={{ position: 'absolute', top: 0, left: 0 }}
       >
         <defs>

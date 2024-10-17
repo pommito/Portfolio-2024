@@ -27,9 +27,9 @@ export default function Home() {
       <section className="flex flex-col min-h-screen py-20">
         <h3 className="font-dot text-3xl h-fit md:mt-32 mb-16 sm:mb-8 md:text-6xl">Selected project</h3>
         <div className="grid grid-cols-1 auto-rows-auto gap-12 md:gap-16 w-full sm:grid-cols-2">
-          {projects.map((project, index) => (
+          {/* {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
-          ))}
+          ))} */}
         </div>
       </section>
 
