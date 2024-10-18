@@ -22,15 +22,15 @@ export default function Grid() {
   if (!isGridVisible) return null;
 
   return (
-    <div className="fixed grid grid-cols-8 gap-6 px-20 w-screen h-screen">
-      <div className="bg-red-700/20 p-4"></div>
-      <div className="bg-red-700/20 p-4"></div>
-      <div className="bg-red-700/20 p-4"></div>
-      <div className="bg-red-700/20 p-4"></div>
-      <div className="bg-red-700/20 p-4"></div>
-      <div className="bg-red-700/20 p-4"></div>
-      <div className="bg-red-700/20 p-4"></div>
-      <div className="bg-red-700/20 p-4"></div>
+    <div className="asbolute grid grid-cols-8 gap-6 px-6 w-full h-full">
+      <div className="bg-red-700/20"></div>
+      <div className="bg-red-700/20"></div>
+      <div className="bg-red-700/20"></div>
+      <div className="bg-red-700/20"></div>
+      <div className="bg-red-700/20"></div>
+      <div className="bg-red-700/20"></div>
+      <div className="bg-red-700/20"></div>
+      <div className="bg-red-700/20"></div>
     </div>
   );
 }
