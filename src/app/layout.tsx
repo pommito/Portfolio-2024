@@ -60,9 +60,9 @@ export default function RootLayout({
       >
         <SmoothScroll>
           <Grid />
-          <Header />
+          {/* <Header /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </SmoothScroll>
       </body>
     </html>
