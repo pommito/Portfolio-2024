@@ -22,7 +22,7 @@ export default function Grid() {
   if (!isGridVisible) return null;
 
   return (
-    <div className="asbolute grid grid-cols-8 gap-6 px-6 w-full h-full">
+    <div className="fixed top-0 left-0 grid grid-cols-8 gap-6 px-8 w-full h-full">
       <div className="bg-red-700/20"></div>
       <div className="bg-red-700/20"></div>
       <div className="bg-red-700/20"></div>
