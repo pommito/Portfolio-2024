@@ -10,7 +10,7 @@ import { educations, workExperiences } from '@/data/resume';
 
 export default function About() {
   return (
-    <main className="font-pp px-4 md:px-8 lg:px-20">
+    <main className="font-pp px-4 pt-40 md:px-8 lg:px-20">
       <section className="md:py-20">
         <h3 className="font-dot text-3xl md:text-6xl mb-8 sm:mb-10">About me</h3>
         <p className="leading-[150%] text-balance mb-10 sm:text-xl">

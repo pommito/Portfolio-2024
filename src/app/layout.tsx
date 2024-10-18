@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 
 import Header from '@/components/Header';
-// import Grid from '@/components/Grid';
+import Grid from '@/components/Grid';
 import Footer from '@/components/Footer';
 import SmoothScroll from '@/components/animations/SmoothScroll';
 
@@ -59,7 +59,7 @@ export default function RootLayout({
         className={`${dotemp8bit.variable} ${ppNeueMontrealBook.variable} ${ppNeueMontreal.variable} antialiased relative mx-auto max-w-[1920px] `}
       >
         <SmoothScroll>
-          {/* <Grid /> */}
+          <Grid />
           <Header />
           {children}
           <Footer />

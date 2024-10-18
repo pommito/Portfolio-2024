@@ -35,7 +35,7 @@ export default function Header() {
             <AnimatedLink title="[ Works ]" url="/works" />
           </li>
           <li>
-            <AnimatedLink title="[ Resume ]" url="/resume" />
+            <AnimatedLink title="[ About ]" url="/about" />
           </li>
           <li>
             <AnimatedLink title="[ Contact ]" url="mailto:victor.lebecq.pro@gmail.com" />

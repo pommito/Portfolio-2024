@@ -27,7 +27,7 @@ export default function Footer() {
         href="mailto:victor.lebecq.pro@gmail.com"
         className="font-normal text-2xl sm:text-3xl md:text-[4vw] md:leading-tight"
       >
-        <TextReveal text="victor.lebecq.pro@gmail.com" amountInView={1} />
+        <TextReveal text="victor.lebecq.pro[at]gmail.com" amountInView={1} />
       </Link>
       <div className="text-[#f1f1f1]/50 text-sm flex flex-col items-center justify-between pt-6 w-full border-t border-[#f1f1f1]/20 sm:flex-row sm:item-start">
         <p>Made in French Alps</p>
