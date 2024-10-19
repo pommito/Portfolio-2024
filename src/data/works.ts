@@ -1,10 +1,10 @@
-export interface worksType {
-  title: string;
-  techs: string;
-  date: string;
-  url?: string;
-  githubUrl?: string;
-}
+// export interface worksType {
+//   title: string;
+//   techs: string;
+//   date: string;
+//   url?: string;
+//   githubUrl?: string;
+// }
 
 export const works: worksType[] = [
   {

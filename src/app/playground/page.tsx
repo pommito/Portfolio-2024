@@ -1,10 +1,11 @@
-import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
-
 import Grid from '@/components/Grid';
+import Image from 'next/image';
+
 import Header from '@/components/new/Header';
-import AnimatedLink from '@/components/animations/AnimatedLink';
 import Project from '@/components/new/Project';
+import AnimatedLink from '@/components/animations/AnimatedLink';
+
+import { selectedWorks } from '@/constant/works';
 
 export default function Playground() {
   return (
@@ -62,10 +63,9 @@ export default function Playground() {
             </div>
           </section>
           <section className="row-start-4 row-span-2 grid grid-cols-4 gap-6 w-full">
-            <Project />
-            <Project />
-            <Project />
-            <Project />
+            {selectedWorks.map((project, index) => (
+              <Project key={index} {...project} />
+            ))}
           </section>
         </main>
       </div>
