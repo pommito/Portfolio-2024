@@ -1,7 +1,9 @@
 import Image from 'next/image';
+import { ArrowUpRight } from 'lucide-react';
 
 import Grid from '@/components/Grid';
 import Header from '@/components/new/Header';
+import AnimatedLink from '@/components/animations/AnimatedLink';
 
 export default function Playground() {
   return (
@@ -15,16 +17,25 @@ export default function Playground() {
               <span>Front end</span>
               <span className="ml-16">Developer</span>
             </h1>
-            <div className="flex justify-between text-xl ">
-              <p className="text-balance leading-normal w-2/3">
+            <div className="flex justify-between">
+              <p className="text-xl text-balance leading-normal w-2/3">
                 I’m a 25 years old developer based in France who likes to work with React, Wordpress, and Laravel. With
                 a keen eye for design, I love crafting immersive and scalable experiences on the web. Together, let’s
                 bring your projects to life.
               </p>
-              <ul className="flex flex-col items-end leading-normal">
-                <li>Email</li>
-                <li>Github</li>
-                <li>Linkedin</li>
+              <ul className="flex flex-col justify-around items-end">
+                <li className="flex flex-row gap-3 items-center leading-none text-xl">
+                  <AnimatedLink title="Email" url="mailto:victor.lebecq.pro@gmail.com" />
+                  <Image src="/arrow-icon.svg" alt="arrow icon" aria-hidden width={14} height={14} />
+                </li>
+                <li className="flex flex-row gap-3 items-center leading-none text-xl">
+                  <AnimatedLink title="Github" url="https://github.com/pommito" />
+                  <Image src="/arrow-icon.svg" alt="arrow icon" aria-hidden width={14} height={14} />
+                </li>
+                <li className="flex flex-row gap-3 items-center leading-none text-xl">
+                  <AnimatedLink title="Linkedin" url="www.linkedin.com/in/victor-lebecq" />
+                  <Image src="/arrow-icon.svg" alt="arrow icon" aria-hidden width={14} height={14} />
+                </li>
               </ul>
             </div>
           </section>
@@ -33,13 +44,13 @@ export default function Playground() {
               <Image src="/projects/csf.webp" alt="Chambéry Savoie football" fill className="object-cover" />
             </div>
             <div className="relative w-full h-full">
-              <Image src="/projects/csf.webp" alt="Chambéry Savoie football" fill className="object-cover" />
+              <Image src="/projects/gastini.webp" alt="todo" fill className="object-cover" />
             </div>
             <div className="relative w-full h-full">
-              <Image src="/projects/csf.webp" alt="Chambéry Savoie football" fill className="object-cover" />
+              <Image src="/projects/gojura.webp" alt="todo" fill className="object-cover" />
             </div>
             <div className="relative w-full h-full">
-              <Image src="/projects/csf.webp" alt="Chambéry Savoie football" fill className="object-cover" />
+              <Image src="/projects/gaitoni.webp" alt="todo" fill className="object-cover" />
             </div>
           </section>
         </main>
