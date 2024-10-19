@@ -2,8 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import downloadIcon from '../../public/download.svg';
-import ResumeListItem from '@/components/ResumeListItem';
-import ProjectCard from '@/components/ProjectCard';
+import ResumeListItem from '@/components/old/ResumeListItem';
+import ProjectCard from '@/components/old/ProjectCard';
 import TextReveal from '@/components/animations/TextReveal';
 
 import { projects, firstParagraph, secondParagraph, technos } from '@/data/home';

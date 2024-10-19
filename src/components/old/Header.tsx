@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import AnimatedLink from './animations/AnimatedLink';
+import AnimatedLink from '../animations/AnimatedLink';
 
 export default function Header() {
   const headerVariants = {
