@@ -4,6 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import Grid from '@/components/Grid';
 import Header from '@/components/new/Header';
 import AnimatedLink from '@/components/animations/AnimatedLink';
+import Project from '@/components/new/Project';
 
 export default function Playground() {
   return (
@@ -61,18 +62,10 @@ export default function Playground() {
             </div>
           </section>
           <section className="row-start-4 row-span-2 grid grid-cols-4 gap-6 w-full">
-            <div className="relative w-full h-full">
-              <Image src="/projects/csf.webp" alt="Chambéry Savoie football" fill className="object-cover" />
-            </div>
-            <div className="relative w-full h-full">
-              <Image src="/projects/gastini.webp" alt="todo" fill className="object-cover" />
-            </div>
-            <div className="relative w-full h-full">
-              <Image src="/projects/gojura.webp" alt="todo" fill className="object-cover" />
-            </div>
-            <div className="relative w-full h-full">
-              <Image src="/projects/gaitoni.webp" alt="todo" fill className="object-cover" />
-            </div>
+            <Project />
+            <Project />
+            <Project />
+            <Project />
           </section>
         </main>
       </div>
