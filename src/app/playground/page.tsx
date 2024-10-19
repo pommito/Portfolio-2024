@@ -26,15 +26,36 @@ export default function Playground() {
               <ul className="flex flex-col justify-around items-end">
                 <li className="flex flex-row gap-3 items-center leading-none text-xl">
                   <AnimatedLink title="Email" url="mailto:victor.lebecq.pro@gmail.com" />
-                  <Image src="/arrow-icon.svg" alt="arrow icon" aria-hidden width={14} height={14} />
+                  <Image
+                    src="/arrow-icon.svg"
+                    alt="arrow icon"
+                    className="mt-[2px]"
+                    aria-hidden
+                    width={12}
+                    height={12}
+                  />
                 </li>
                 <li className="flex flex-row gap-3 items-center leading-none text-xl">
                   <AnimatedLink title="Github" url="https://github.com/pommito" />
-                  <Image src="/arrow-icon.svg" alt="arrow icon" aria-hidden width={14} height={14} />
+                  <Image
+                    src="/arrow-icon.svg"
+                    alt="arrow icon"
+                    className="mt-[2px]"
+                    aria-hidden
+                    width={12}
+                    height={12}
+                  />
                 </li>
                 <li className="flex flex-row gap-3 items-center leading-none text-xl">
                   <AnimatedLink title="Linkedin" url="www.linkedin.com/in/victor-lebecq" />
-                  <Image src="/arrow-icon.svg" alt="arrow icon" aria-hidden width={14} height={14} />
+                  <Image
+                    src="/arrow-icon.svg"
+                    alt="arrow icon"
+                    className="mt-[2px]"
+                    aria-hidden
+                    width={12}
+                    height={12}
+                  />
                 </li>
               </ul>
             </div>

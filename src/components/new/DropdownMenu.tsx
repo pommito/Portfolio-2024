@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import AnimatedLink from '../animations/AnimatedLink';
 
-import { navLinks } from '@/constants/navLinks';
+import { navLinks } from '@/constant/navLinks';
 
 export default function DropdownMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
