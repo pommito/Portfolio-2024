@@ -4,11 +4,11 @@ import { useState, useEffect, useCallback } from 'react';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import AnimatedLink from '../animations/AnimatedLink';
 
+import { navLinks } from '@/constants/navLinks';
+
 export default function DropdownMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const buttonControls = useAnimation();
-
-  const menuItems = ['Works', 'About', 'Contact'];
 
   const toggleMenu = async () => {
     if (isMenuOpen) {
@@ -76,9 +76,9 @@ export default function DropdownMenu() {
         {isMenuOpen && (
           <nav className="absolute top-100 right-0 text-right uppercase">
             <motion.ul className="flex flex-col gap-4">
-              {menuItems.map((item, index) => (
+              {navLinks.map((link, index) => (
                 <motion.li
-                  key={item}
+                  key={link.title}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
@@ -93,7 +93,7 @@ export default function DropdownMenu() {
                     }
                   }}
                 >
-                  <AnimatedLink title={item} url={`/${item.toLowerCase()}`} />
+                  <AnimatedLink title={link.title} url={link.url} />
                 </motion.li>
               ))}
             </motion.ul>
