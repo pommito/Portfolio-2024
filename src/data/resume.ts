@@ -16,7 +16,7 @@ export const workExperiences: experienceType[] = [
     title: 'Web Developer',
     date: '[ Feb 2022 - Present ]',
     company: 'Freelance',
-    techs: 'Wordpress | React | Javascript',
+    techs: 'React | Redux | Wordpress',
   },
   {
     title: 'Intern Web Marketer',
