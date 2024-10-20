@@ -60,7 +60,7 @@ export default function DropdownMenu() {
   return (
     <div className="relative leading-none">
       <button
-        className="cursor-pointer font-medium list-none text-right uppercase opacity-80 hover:opacity-100 transition-opacity sm:pl-4 pb-4"
+        className="cursor-pointer font-medium list-none text-right uppercase opacity-80 hover:opacity-100 transition-opacity sm:pl-4 pb-2"
         onClick={toggleMenu}
       >
         <motion.span
@@ -75,7 +75,7 @@ export default function DropdownMenu() {
       <AnimatePresence mode="wait" onExitComplete={startButtonAnimation}>
         {isMenuOpen && (
           <nav className="absolute top-100 right-0 text-right uppercase">
-            <motion.ul className="flex flex-col gap-4">
+            <motion.ul className="flex flex-col gap-2">
               {navLinks.map((link, index) => (
                 <motion.li
                   key={link.title}
