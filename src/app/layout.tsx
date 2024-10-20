@@ -4,6 +4,7 @@ import './globals.css';
 
 import Header from '@/components/layout/Header';
 import SmoothScroll from '@/components/ui/SmoothScroll';
+import Grid from '@/components/ui/Grid';
 
 const dotemp8bit = localFont({
   src: './fonts/Dotemp-8bit.woff',
@@ -54,13 +55,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dotemp8bit.variable} ${ppNeueMontrealBook.variable} ${ppNeueMontreal.variable} antialiased relative mx-auto max-w-[1920px] `}
+        className={`${dotemp8bit.variable} ${ppNeueMontrealBook.variable} ${ppNeueMontreal.variable} antialiased font-pp relative h-[100dvh] w-screen max-w-[1920px] mx-auto p-2`}
       >
-        <SmoothScroll>
-          <Header />
-          {children}
-          {/* <Footer /> */}
-        </SmoothScroll>
+        <div className="relative bg-white h-full w-full border rounded-md px-6 py-6">
+          <Grid />
+          <SmoothScroll>
+            <Header />
+            {children}
+          </SmoothScroll>
+        </div>
       </body>
     </html>
   );
