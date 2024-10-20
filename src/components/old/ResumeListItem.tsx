@@ -1,6 +1,6 @@
 'use client';
 
-import { experienceType } from '@/data/resume';
+import { experienceType } from '@/constant/resume';
 import { useEffect, useRef, useState } from 'react';
 
 type ResumeListItemPropsType = experienceType;
