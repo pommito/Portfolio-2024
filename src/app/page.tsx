@@ -8,7 +8,7 @@ import { selectedWorks } from '@/constant/works';
 
 export default function Home() {
   return (
-    <main className="grid grid-rows-5 gap-6 w-full h-full">
+    <main className="grid grid-rows-5 gap-6 h-full w-full max-w-[1920px] 2xl:mx-auto">
       <section className="row-start-1 row-span-3 flex flex-col justify-end gap-6 h-full">
         <h1 className="flex flex-col font-medium leading-none" style={{ fontSize: 'clamp(3.25rem, 15vw, 7.5rem)' }}>
           <span>Front end</span>
