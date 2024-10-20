@@ -1,37 +1,74 @@
-import Link from 'next/link';
+import Grid from '@/components/ui/Grid';
 import Image from 'next/image';
 
-import downloadIcon from '../../public/download.svg';
-import ResumeListItem from '@/components/old/ResumeListItem';
-import ProjectCard from '@/components/old/ProjectCard';
-import TextReveal from '@/components/animations/TextReveal';
+import Header from '@/components/layout/Header';
+import Project from '@/components/common/ProjectCard';
+import AnimatedLink from '@/components/common/AnimatedLink';
 
-import { projects, firstParagraph, secondParagraph, technos } from '@/data/home';
-import { workExperiences, educations } from '@/data/resume';
+import { selectedWorks } from '@/constant/works';
 
-export default function Home() {
+export default function Playground() {
   return (
-    <main className="font-pp px-4 md:px-8 lg:px-20">
-      <section className="flex flex-col justify-end h-[100dvh] max-h py-20">
-        <h2 className="font-dot text-3xl mt-[20vh] overflow-hidden sm:text-[8.5vw] sm:leading-[100%]">
-          <TextReveal text="Victor Lebecq" />
-        </h2>
-        <h1 className="text-6xl overflow-hidden  md:ml-20 sm:text-[8.5vw] sm:leading-[100%]">
-          <TextReveal text="Front end Developer" delay={0.5} />
-        </h1>
-        <p className="leading-[150%] text-balance text-left sm:text-xl mt-4 md:mt-auto md:ml-auto  lg:text-right lg:w-[650px]">
-          <TextReveal text={firstParagraph} delay={0.85} />
-        </p>
-      </section>
-
-      <section className="flex flex-col min-h-screen py-20">
-        <h3 className="font-dot text-3xl h-fit md:mt-32 mb-16 sm:mb-8 md:text-6xl">Selected project</h3>
-        <div className="grid grid-cols-1 auto-rows-auto gap-12 md:gap-16 w-full sm:grid-cols-2">
-          {/* {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))} */}
-        </div>
-      </section>
-    </main>
+    <div className="font-pp h-[100dvh] w-screen p-2">
+      <div className="relative bg-white h-full w-full border rounded-md px-6 py-6">
+        <Grid />
+        <Header />
+        <main className="grid grid-rows-5 gap-6 w-full h-full">
+          <section className="row-start-1 row-span-3 flex flex-col justify-end gap-6 h-full">
+            <h1 className="flex flex-col font-medium text-9xl">
+              <span>Front end</span>
+              <span className="ml-16">Developer</span>
+            </h1>
+            <div className="flex justify-between">
+              <p className="text-xl text-balance leading-normal w-2/3">
+                I’m a 25 years old developer based in France who likes to work with React, Wordpress, and Laravel. With
+                a keen eye for design, I love crafting immersive and scalable experiences on the web. Together, let’s
+                bring your projects to life.
+              </p>
+              <ul className="flex flex-col justify-around items-end">
+                <li className="flex flex-row gap-3 items-center leading-none text-xl">
+                  <AnimatedLink title="Email" url="mailto:victor.lebecq.pro@gmail.com" />
+                  <Image
+                    src="/arrow-icon.svg"
+                    alt="arrow icon"
+                    className="mt-[2px]"
+                    aria-hidden
+                    width={12}
+                    height={12}
+                  />
+                </li>
+                <li className="flex flex-row gap-3 items-center leading-none text-xl">
+                  <AnimatedLink title="Github" url="https://github.com/pommito" />
+                  <Image
+                    src="/arrow-icon.svg"
+                    alt="arrow icon"
+                    className="mt-[2px]"
+                    aria-hidden
+                    width={12}
+                    height={12}
+                  />
+                </li>
+                <li className="flex flex-row gap-3 items-center leading-none text-xl">
+                  <AnimatedLink title="Linkedin" url="www.linkedin.com/in/victor-lebecq" />
+                  <Image
+                    src="/arrow-icon.svg"
+                    alt="arrow icon"
+                    className="mt-[2px]"
+                    aria-hidden
+                    width={12}
+                    height={12}
+                  />
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section className="row-start-4 row-span-2 grid grid-cols-4 gap-6 w-full">
+            {selectedWorks.map((project, index) => (
+              <Project key={index} {...project} />
+            ))}
+          </section>
+        </main>
+      </div>
+    </div>
   );
 }

@@ -1,5 +1,5 @@
-import TextReveal from '@/components/animations/TextReveal';
-import WorkListItem from '@/components/WorkListItem';
+import TextReveal from '@/components/old/TextReveal';
+import WorkListItem from '@/components/old/WorkListItem';
 
 import { works, paragraph } from '@/data/works';
 

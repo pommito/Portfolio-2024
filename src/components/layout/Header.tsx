@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import DropdownMenu from './DropdownMenu';
+
+import DropdownMenu from '../ui/DropdownMenu';
 
 export default function Header() {
   return (

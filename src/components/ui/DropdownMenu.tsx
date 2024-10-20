@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { AnimatePresence, motion, useAnimation } from 'framer-motion';
-import AnimatedLink from '../animations/AnimatedLink';
+import AnimatedLink from '../common/AnimatedLink';
 
 import { navLinks } from '@/constant/navLinks';
 
