@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="grid grid-rows-5 gap-6 w-full h-full">
       <section className="row-start-1 row-span-3 flex flex-col justify-end gap-6 h-full">
-        <h1 className="flex flex-col font-medium leading-none" style={{ fontSize: 'clamp(3.75rem, 12vw, 7.5rem)' }}>
+        <h1 className="flex flex-col font-medium leading-none" style={{ fontSize: 'clamp(3.25rem, 15vw, 7.5rem)' }}>
           <span>Front end</span>
           <span className="ml-12 sm:ml-16">Developer</span>
         </h1>
@@ -39,7 +39,7 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      <section className="hidden row-start-4 row-span-2 sm:grid grid-cols-1 auto-rows-auto gap-6 w-full sm:grid-cols-2 lg:grid-cols-4">
+      <section className="hidden row-start-4 row-span-2 sm:grid grid-cols-2 auto-rows-auto gap-6 w-full md:grid-cols-4">
         {selectedWorks.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}

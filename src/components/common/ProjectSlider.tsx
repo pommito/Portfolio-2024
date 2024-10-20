@@ -5,11 +5,11 @@ import { projectType } from '@/constant/works';
 
 export default function ProjectSlider({ id, title, mobileImage, url }: projectType) {
   return (
-    <div className="flex flex-col w-[calc(100vw-2rem)] h-full gap-2">
+    <Link href={url} className="flex flex-col w-[calc(100vw-1.5rem)] h-full gap-2">
       <div className="relative w-full h-full">
         <Image src={mobileImage} alt="todo" fill className="object-cover" />
       </div>
       <h3 className="text-sm font-medium leading-none uppercase">{title}</h3>
-    </div>
+    </Link>
   );
 }
