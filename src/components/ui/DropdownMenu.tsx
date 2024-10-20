@@ -60,7 +60,7 @@ export default function DropdownMenu() {
   return (
     <div className="relative leading-none">
       <button
-        className="cursor-pointer font-medium list-none text-right uppercase opacity-80 hover:opacity-100 transition-opacity pl-4 pb-4"
+        className="cursor-pointer font-medium list-none text-right uppercase opacity-80 hover:opacity-100 transition-opacity sm:pl-4 sm:pb-4"
         onClick={toggleMenu}
       >
         <motion.span
