@@ -10,11 +10,11 @@ export default function Works() {
       <p className="mb-8 text-balance sm:text-xl">
         <TextReveal text={paragraph} />
       </p>
-      <ul className="mb-4 sm:mb-10">
+      {/* <ul className="mb-4 sm:mb-10">
         {works.map((exp, index) => (
           <WorkListItem key={index} {...exp} />
         ))}
-      </ul>
+      </ul> */}
     </main>
   );
 }

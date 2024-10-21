@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { ViewTransitions } from 'next-view-transitions';
 import localFont from 'next/font/local';
 import './globals.css';
 
@@ -53,18 +54,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${dotemp8bit.variable} ${ppNeueMontrealBook.variable} ${ppNeueMontreal.variable} antialiased font-pp relative min-h-screen md:h-[100dvh] w-screen mx-auto p-2 overflow-hidden`}
-      >
-        <div className="relative bg-white h-full w-full border rounded-md p-4 sm:p-6 overflow-y-scroll overflow-x-hidden md:overflow-y-hide md:no-scrollbar ">
-          <Grid />
-          <SmoothScroll>
-            <Header />
-            {children}
-          </SmoothScroll>
-        </div>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={`${dotemp8bit.variable} ${ppNeueMontrealBook.variable} ${ppNeueMontreal.variable} antialiased font-pp relative min-h-screen md:h-[100dvh] w-screen mx-auto p-2 overflow-hidden`}
+        >
+          <div className="relative bg-white h-full w-full border rounded-md p-4 sm:p-6 overflow-y-scroll overflow-x-hidden md:overflow-y-hide md:no-scrollbar ">
+            <Grid />
+            <SmoothScroll>
+              <Header />
+              {children}
+            </SmoothScroll>
+          </div>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
