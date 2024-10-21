@@ -5,7 +5,7 @@ import { motion, useMotionValue } from 'framer-motion';
 
 import ProjectSlider from '@/components/common/ProjectSlider';
 
-import { selectedWorks } from '@/constant/works';
+import { selectedWorks } from '@/constant/selectedWorks';
 
 const DRAG_BUFFER = 50;
 

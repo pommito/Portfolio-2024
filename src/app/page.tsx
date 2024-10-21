@@ -4,7 +4,7 @@ import ProjectCard from '@/components/common/ProjectCard';
 import AnimatedLink from '@/components/common/AnimatedLink';
 import MobileSlider from '@/components/ui/MobileSlider';
 
-import { selectedWorks } from '@/constant/works';
+import { selectedWorks } from '@/constant/selectedWorks';
 
 export default function Home() {
   return (

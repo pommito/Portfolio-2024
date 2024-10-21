@@ -1,38 +1,59 @@
-export interface projectType {
-  id: number;
+export interface workType {
   title: string;
-  image: string;
-  mobileImage: string;
-  url: string;
+  techs: string;
+  date: string;
+  url?: string;
+  githubUrl?: string;
 }
 
-export const selectedWorks: projectType[] = [
+export const works: workType[] = [
   {
-    id: 0,
-    title: 'Chambéry Savoie Football',
-    image: '/projects/csf.webp',
-    mobileImage: '/projects/csf_square.webp',
-    url: 'https://chamberysavoiefootball.fr/',
-  },
-  {
-    id: 1,
     title: 'Gastini',
-    image: '/projects/gastini.webp',
-    mobileImage: '/projects/gastini_square.webp',
+    techs: '[ Wordpress | Javascript ]',
+    date: '2024',
     url: 'https://gastini.fr',
   },
   {
-    id: 2,
+    title: 'Lightfile',
+    techs: '[ React ]',
+    date: '2024',
+    url: 'https://lightfile.victorlebecq.fr',
+    githubUrl: 'https://github.com/pommito/Lightfile',
+  },
+  {
+    title: 'Gaïtoni Plomberie',
+    techs: '[ Wordpress | Javascript ]',
+    date: '2024',
+    url: 'https://gaitoni-plomberie.com',
+  },
+  {
     title: 'Gojura',
-    image: '/projects/gojura.webp',
-    mobileImage: '/projects/gojura_square.webp',
+    techs: '[ Wordpress | Javascript ]',
+    date: '2024',
     url: 'https://gojura.fr',
   },
   {
-    id: 3,
-    title: 'Gaitoni Plomberie',
-    image: '/projects/gaitoni.webp',
-    mobileImage: '/projects/gaitoni_square.webp',
-    url: 'https://gaitoni-plomberie.com',
+    title: 'WePeak',
+    techs: '[ React | Redux | Symfony ]',
+    date: '2024',
+    githubUrl: 'https://github.com/O-clock-Jelly/projet-06-we-peak-front',
+  },
+  {
+    title: 'Chambéry Savoie Football',
+    techs: '[ Wordpress | Javascript ]',
+    date: '2023',
+    url: 'https://chamberysavoiefootball.fr',
+  },
+  {
+    title: 'Giea des savoie',
+    techs: '[ Wordpress ]',
+    date: '2023',
+    url: 'https://giea-des-savoie.fr',
+  },
+  {
+    title: 'Immo Lyon 7',
+    techs: '[ Wordpress ]',
+    date: '2023',
+    url: 'https://immo-lyon7.fr',
   },
 ];

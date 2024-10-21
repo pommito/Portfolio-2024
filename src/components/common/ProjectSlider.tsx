@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { projectType } from '@/constant/works';
+import { selectedWorkType } from '@/constant/selectedWorks';
 
-export default function ProjectSlider({ id, title, mobileImage, url }: projectType) {
+export default function ProjectSlider({ id, title, mobileImage, url }: selectedWorkType) {
   return (
     <Link href={url} className="flex flex-col w-[calc(100vw-3rem)] h-full gap-2">
       <div className="relative w-full h-full">

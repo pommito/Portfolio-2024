@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import Breadcrumb from '@/components/ui/Breadcrumb';
-import ResumeListItem from '@/components/old/ResumeListItem';
+import ResumeListItem from '@/components/ui/ResumeListItem';
 import SocialLink from '@/components/common/SocialLink';
 
 import aboutImage from '/public/about.webp';
