@@ -1,20 +1,25 @@
-import TextReveal from '@/components/old/TextReveal';
-import WorkListItem from '@/components/old/WorkListItem';
+import Image from 'next/image';
 
-import { works, paragraph } from '@/data/works';
+import Breadcrumb from '@/components/ui/Breadcrumb';
+
+import aboutImage from '/public/about.webp';
 
 export default function Works() {
   return (
-    <main className="font-pp px-4 sm:px-20 pt-40">
-      <h1 className="font-dot  text-4xl mb-6 sm:text-6xl">Works</h1>
-      <p className="mb-8 text-balance sm:text-xl">
-        <TextReveal text={paragraph} />
-      </p>
-      {/* <ul className="mb-4 sm:mb-10">
-        {works.map((exp, index) => (
-          <WorkListItem key={index} {...exp} />
-        ))}
-      </ul> */}
+    <main className="grid grid-rows-8 grid-cols-8 gap-4 w-full h-full max-w-[1920px] sm:gap-6 2xl:mx-auto">
+      <section className="flex flex-col gap-3 col-start-1 col-span-8 row-start-2 row-span-2 sm:col-span-5 md:col-span-5">
+        <Breadcrumb pageTitle="Works" />
+        <h1 className="font-medium text-6xl leading-none">Works</h1>
+        <p className="text-balance leading-normal lg:w-4/5">
+          These is the full list of all the projects i’ve been working on as a freelance developer. Here you can find
+          the link to the live website and the source code if the project is open source. Feel free to browse those
+          projects.
+        </p>
+      </section>
+      <div className="bg-red-200 flex flex-col justify-center col-start-1 col-span-8 row-start-6 row-span-3 mt-6 sm:row-start-5 sm:row-span-4  md:justify-end md:row-start-5 md:row-span-4 lg:col-span-5"></div>
+      <div className="hidden col-start-6 col-span-3 row-start-6 row-span-3 lg:block">
+        <Image src={aboutImage} alt="placeholder image" objectFit="cover" className="w-full h-full" />
+      </div>
     </main>
   );
 }
