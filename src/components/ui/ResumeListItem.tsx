@@ -41,7 +41,7 @@ export default function ResumeListItem({ title, date, company, techs }: ResumeLi
   return (
     <li
       ref={ref}
-      className={`relative flex justify-between items-center py-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:transform before:-translate-x-1/2 before:w-full before:h-[1px] before:bg-[#000]/20 before:transition-transform before:duration-[2000ms] before:transition-delay-150 before:origin-center ease-in-out ${
+      className={`relative flex justify-between items-center py-2 before:content-[''] before:absolute before:bottom-0 before:left-1/2 before:transform before:-translate-x-1/2 before:w-full before:h-[1px] before:bg-[#000]/20 before:transition-transform before:duration-[2000ms] before:delay-200 before:transition-delay-150 before:origin-center ease-in-out ${
         isVisible ? 'before:scale-x-100' : 'before:scale-x-0'
       }`}
     >
