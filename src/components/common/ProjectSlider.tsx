@@ -6,7 +6,7 @@ import { selectedWorkType } from '@/constant/selectedWorks';
 export default function ProjectSlider({ id, title, mobileImage, url }: selectedWorkType) {
   return (
     <Link href={url} className="flex flex-col w-[calc(100vw-3rem)] h-full gap-2">
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full min-h-[33.33vh]">
         <Image src={mobileImage} alt="todo" fill className="object-cover" />
       </div>
       <div className="flex justify-between items-end text-sm font-medium leading-none uppercase">

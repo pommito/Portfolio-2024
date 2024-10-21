@@ -9,7 +9,7 @@ import { selectedWorks } from '@/constant/selectedWorks';
 export default function Home() {
   return (
     <main className="grid grid-rows-5 gap-6 h-full w-full max-w-[1920px] 2xl:mx-auto">
-      <section className="row-start-1 row-span-3 flex flex-col justify-end gap-6 h-full">
+      <section className="row-start-1 row-span-3  flex flex-col justify-end gap-6 h-full">
         <h1 className="flex flex-col font-medium leading-none" style={{ fontSize: 'clamp(3.25rem, 15vw, 7.5rem)' }}>
           <span>Front end</span>
           <span className="ml-12 sm:ml-16">Developer</span>
@@ -39,7 +39,7 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      <section className="hidden row-start-4 row-span-2 sm:grid grid-cols-2 auto-rows-auto gap-6 w-full md:grid-cols-4">
+      <section className="hidden row-start-2 row-span-4 sm:grid grid-rows-4 auto-rows-auto gap-6 w-full sm:row-start-4 sm:row-span-2 sm:grid-cols-2 sm:grid-rows-1 md:grid-cols-4">
         {selectedWorks.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}

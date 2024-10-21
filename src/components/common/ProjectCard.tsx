@@ -5,7 +5,7 @@ import { projectType } from '@/constant/works';
 
 export default function ProjectCard({ id, title, image, url }: projectType) {
   return (
-    <Link href={url} className="flex flex-col gap-2 w-full h-full">
+    <Link href={url} className="flex flex-col gap-2 h-full">
       <div className="relative w-full h-full">
         <Image src={image} alt="todo" fill className="object-cover" />
       </div>
