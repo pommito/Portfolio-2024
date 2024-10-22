@@ -59,7 +59,7 @@ export default function RootLayout({
         <body
           className={`${dotemp8bit.variable} ${ppNeueMontrealBook.variable} ${ppNeueMontreal.variable} antialiased font-pp relative h-auto min-h-[100dvh] sm:h-[100dvh] w-screen mx-auto p-2 overflow-hidden`}
         >
-          <div className="relative bg-white h-full w-full border rounded-md p-4 sm:p-6 overflow-y-scroll overflow-x-hidden md:overflow-y-hide md:no-scrollbar ">
+          <div className="relative bg-white h-full min-h-[calc(100dvh-24px)] w-full border rounded-md p-4 sm:p-6 overflow-y-scroll overflow-x-hidden md:overflow-y-hide md:no-scrollbar ">
             <Grid />
             <SmoothScroll>
               <Header />
