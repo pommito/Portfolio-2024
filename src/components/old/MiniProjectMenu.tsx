@@ -1,9 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 
 import placeholder from '@/../public/placeholder.jpg';
-import { useState } from 'react';
 
 export default function MiniProjectMenu() {
   const [imageSelected, setImageSelected] = useState(0);

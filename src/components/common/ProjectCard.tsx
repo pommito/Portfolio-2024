@@ -3,7 +3,7 @@ import { Link } from 'next-view-transitions';
 
 import { selectedWorkType } from '@/constant/selectedWorks';
 
-export default function ProjectCard({ id, title, image, url }: selectedWorkType) {
+export default function ProjectCard({ title, image, url }: selectedWorkType) {
   return (
     <Link href={`/works/${url}`} className="flex flex-col gap-2 h-full">
       <div className="relative w-full h-full" style={{ viewTransitionName: `project-image-${url}` }}>
