@@ -1,7 +1,11 @@
+import Image from 'next/image';
+
 import SocialLink from '@/components/common/SocialLink';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 
-export default function Page({ params: { slug } }: { params: { slug: string } }) {
+import imageTest from '/public/projects/csf.webp';
+
+export default function Page({ params: { url } }: { params: { url: string } }) {
   return (
     <main className="grid grid-rows-8 grid-cols-8 gap-4 w-full h-full max-w-[1920px] sm:gap-6 2xl:mx-auto">
       <section className="flex flex-col gap-3 col-start-1 col-span-8 row-start-2 row-span-2 sm:col-span-5 md:col-span-5">
@@ -20,6 +24,12 @@ export default function Page({ params: { slug } }: { params: { slug: string } })
           <SocialLink title="Visit website" url="https://github.com/pommito" />
         </ul>
       </section>
+      <div
+        className="col-start-1 col-span-8 row-start-4 row-span-2 sm:col-start-5 sm:col-span-4 sm:row-start-2 sm:row-span-3 md:col-start-6 md:col-span-3 "
+        style={{ viewTransitionName: `project-image-${url}` }}
+      >
+        <Image src={imageTest} alt="placeholder image" className="object-cover" priority />
+      </div>
     </main>
   );
 }

@@ -7,6 +7,8 @@ import MobileSlider from '@/components/ui/MobileSlider';
 import { selectedWorks } from '@/constant/selectedWorks';
 
 export default function Home() {
+  console.log(selectedWorks);
+
   return (
     <main className="grid grid-rows-5 gap-6 h-full w-full max-w-[1920px] 2xl:mx-auto">
       <section className="row-start-1 row-span-3  flex flex-col justify-end gap-6 h-full">

@@ -8,6 +8,12 @@ export interface workType {
 
 export const works: workType[] = [
   {
+    title: 'Montyon Capital',
+    techs: '[ Wordpress | Javascript ]',
+    date: '2024',
+    url: 'https://montyon-capital.com',
+  },
+  {
     title: 'Gastini',
     techs: '[ Wordpress | Javascript ]',
     date: '2024',
@@ -27,16 +33,16 @@ export const works: workType[] = [
     url: 'https://gaitoni-plomberie.com',
   },
   {
-    title: 'Gojura',
-    techs: '[ Wordpress | Javascript ]',
-    date: '2024',
-    url: 'https://gojura.fr',
-  },
-  {
     title: 'WePeak',
     techs: '[ React | Redux | Symfony ]',
     date: '2024',
     githubUrl: 'https://github.com/O-clock-Jelly/projet-06-we-peak-front',
+  },
+  {
+    title: 'Gojura',
+    techs: '[ Wordpress | Javascript ]',
+    date: '2024',
+    url: 'https://gojura.fr',
   },
   {
     title: 'Chambéry Savoie Football',

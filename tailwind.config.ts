@@ -31,6 +31,20 @@ const config: Config = {
 
       '2xl': '1536px',
     },
+    keyframes: {
+      fadeOut: {
+        from: { opacity: '1', transform: 'scale(1)' },
+        to: { opacity: '0', transform: 'scale(0.8)' },
+      },
+      scaleIn: {
+        from: { opacity: '0', transform: 'scale(1.2)' },
+        to: { opacity: '1', transform: 'scale(1)' },
+      },
+    },
+    animation: {
+      'fade-out': 'fadeOut 0.6s ease-out',
+      'scale-in': 'scaleIn 0.6s ease-out',
+    },
   },
   plugins: [],
 };
