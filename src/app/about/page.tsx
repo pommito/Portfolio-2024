@@ -28,7 +28,7 @@ export default function About() {
         </ul>
       </section>
       <div className="col-start-1 col-span-8 row-start-4 row-span-2 sm:col-start-6 sm:col-span-3 sm:row-start-2 sm:row-span-3 md:col-start-6 md:col-span-3 lg:col-start-7 lg:col-span-2 lg:row-span-4 lg:row-start-2  ">
-        <Image src={meImage} alt="placeholder image" objectFit="cover" className="h-80 w-full md:h-full" />
+        <Image src={meImage} alt="profil picture" objectFit="cover" className="h-80 w-full md:h-full" />
       </div>
       <div className="flex flex-col justify-center col-start-1 col-span-8 row-start-6 row-span-3 mt-6 sm:row-start-5 sm:row-span-4  md:justify-end md:row-start-5 md:row-span-4 lg:col-span-5">
         <h2 className="opacity-50">[ Work Experiences ]</h2>
@@ -45,7 +45,7 @@ export default function About() {
         </ul>
       </div>
       <div className="hidden col-start-6 col-span-3 row-start-6 row-span-3 lg:block">
-        <Image src={aboutImage} alt="placeholder image" objectFit="cover" className="w-full h-full" />
+        <Image src={aboutImage} alt="about me image" objectFit="cover" className="w-full h-full" />
       </div>
     </main>
   );
