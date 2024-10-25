@@ -11,8 +11,8 @@ import { educations, workExperiences } from '@/constant/resume';
 
 export default function About() {
   return (
-    <main className="grid grid-rows-8 grid-cols-8 gap-4 w-full h-full max-w-[1920px] sm:gap-6 2xl:mx-auto">
-      <section className="flex flex-col gap-3 col-start-1 col-span-8 row-start-2 row-span-2 sm:col-span-5 md:col-span-5">
+    <main className="flex flex-col mt-[20dvh] mb-12 gap-4 w-full h-full max-w-[1920px] sm:gap-6 md:grid md:grid-rows-8 md:grid-cols-8 md:mt-0 2xl:mx-auto">
+      <section className="flex flex-col gap-3 md:col-start-1 md:col-span-5 md:row-start-2 md:row-span-2">
         <Breadcrumb pageTitle="About" />
         <h1 className="font-medium text-6xl leading-none">About me</h1>
         <p className="text-balance leading-normal lg:w-4/5">
@@ -27,10 +27,10 @@ export default function About() {
           <SocialLink title="Intagram" url="https://www.instagram.com/dev.by.vic" />
         </ul>
       </section>
-      <div className="col-start-1 col-span-8 row-start-4 row-span-2 sm:col-start-6 sm:col-span-3 sm:row-start-2 sm:row-span-3 md:col-start-6 md:col-span-3 lg:col-start-7 lg:col-span-2 lg:row-span-4 lg:row-start-2  ">
+      <div className="md:row-start-2 md:row-span-3 md:col-start-6 md:col-span-3 lg:col-start-7 lg:col-span-2 lg:row-span-4 lg:row-start-2  ">
         <Image src={meImage} alt="profil picture" objectFit="cover" className="h-80 w-full md:h-full" />
       </div>
-      <div className="flex flex-col justify-center col-start-1 col-span-8 row-start-6 row-span-3 mt-6 sm:row-start-5 sm:row-span-4  md:justify-end md:row-start-5 md:row-span-4 lg:col-span-5">
+      <div className="flex flex-col justify-center mt-6 md:justify-end md:col-start-1 md:col-span-8 md:row-start-5 md:row-span-4 lg:col-span-5">
         <h2 className="opacity-50">[ Work Experiences ]</h2>
         <ul className="mb-8">
           {workExperiences.map((exp, index) => (
@@ -44,7 +44,7 @@ export default function About() {
           ))}
         </ul>
       </div>
-      <div className="hidden col-start-6 col-span-3 row-start-6 row-span-3 lg:block">
+      <div className="hidden lg:col-start-6 lg:col-span-3 rlg:ow-start-6 lg:row-span-3 lg:block">
         <Image src={aboutImage} alt="about me image" objectFit="cover" className="w-full h-full" />
       </div>
     </main>
