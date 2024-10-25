@@ -46,7 +46,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en">
         <body
-          className={`${ppNeueMontreal.variable} bg-white antialiased font-pp relative h-auto min-h-[100dvh] sm:h-[100dvh] w-screen mx-auto p-4 overflow-hidden`}
+          className={`${ppNeueMontreal.variable} antialiased font-pp relative h-auto min-h-[100dvh] sm:h-[100dvh] w-screen mx-auto p-4 overflow-hidden`}
         >
           <Grid />
           <SmoothScroll>

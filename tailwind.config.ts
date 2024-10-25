@@ -10,7 +10,6 @@ const config: Config = {
     extend: {
       fontFamily: {
         pp: ['var(--font-pp-neue-montreal)', 'sans-serif'],
-        dot: ['var(--font-dotemp-bit)'],
       },
       colors: {
         background: 'var(--background)',

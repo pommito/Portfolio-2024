@@ -10,6 +10,7 @@ import { selectedWorks } from '@/constant/selectedWorks';
 const DRAG_BUFFER = 50;
 
 export default function MobileSlider() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isDragging, setIsDragging] = useState(false);
   const [imgIndex, setImgIndex] = useState(0);
 

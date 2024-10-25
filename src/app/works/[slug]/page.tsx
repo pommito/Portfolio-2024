@@ -46,7 +46,7 @@ export default async function Page({ params: { slug } }: { params: { slug: strin
       <div className="flex justify-between gap-6 md:col-start-6 md:col-span-3 md:row-start-4 md:row-span-1">
         <div className="w-1/3">
           <div className="relative after:content-[''] after:absolute after:top-1/2 after:left-0 after:transform after:-translate--1/2 after:w-full after:h-[1px] after:bg-[#0c0c0c]/15 after:-z-1">
-            <h2 className="relative inline-block font-medium bg-white pr-2 z-10">Date</h2>
+            <h2 className="relative inline-block font-medium bg-[#fdfdfd] pr-2 z-10">Date</h2>
           </div>
           <p className="text-sm opacity-50">{work.date}</p>
         </div>
