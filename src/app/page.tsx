@@ -19,7 +19,7 @@ export default function Home() {
           style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)' }}
         >
           <p className="text-balance leading-normal sm:w-2/3">
-            I’m a 25 years old developer based in France who likes to work with React, Wordpress, and Laravel. With a
+            I’m a 25 years old developer based in France who likes to work with React, Wordpress, and NextJS. With a
             keen eye for design, I love crafting immersive and scalable experiences on the web. Together, let’s bring
             your projects to life.
           </p>
