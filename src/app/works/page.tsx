@@ -24,7 +24,7 @@ export default function Works() {
         ))}
       </div>
       <div className="hidden lg:col-start-1 lg:col-span-3 lg:row-start-6 lg:row-span-3 lg:block">
-        <Image src={image} alt="placeholder image" objectFit="cover" className="w-full h-full" />
+        <Image src={image} alt="works page image" width={1080} height={720} className="w-full h-full" />
       </div>
     </main>
   );
