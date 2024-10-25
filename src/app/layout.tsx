@@ -5,7 +5,6 @@ import './globals.css';
 
 import Header from '@/components/layout/Header';
 import SmoothScroll from '@/components/ui/SmoothScroll';
-import Grid from '@/components/ui/Grid';
 
 const ppNeueMontreal = localFont({
   src: [
@@ -65,7 +64,6 @@ export default function RootLayout({
         <body
           className={`${ppNeueMontreal.variable} antialiased font-pp relative h-auto min-h-[100dvh] sm:h-[100dvh] w-screen mx-auto p-4`}
         >
-          <Grid />
           <SmoothScroll>
             <Header />
             {children}
