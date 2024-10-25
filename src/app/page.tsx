@@ -26,15 +26,15 @@ export default function Home() {
           <ul className="flex justify-between items-end sm:flex-col sm:justify-around">
             <li className="flex flex-row gap-3 items-center leading-none">
               <AnimatedLink title="Email" url="mailto:victor.lebecq.pro@gmail.com" />
-              <Image src="/arrow-icon.svg" alt="arrow icon" className="mt-[2px]" aria-hidden width={12} height={12} />
+              <Image src="/Arrow-icon.svg" alt="arrow icon" className="mt-[2px]" aria-hidden width={12} height={12} />
             </li>
             <li className="flex flex-row gap-3 items-center leading-none">
               <AnimatedLink title="Github" url="https://github.com/pommito" />
-              <Image src="/arrow-icon.svg" alt="arrow icon" className="mt-[2px]" aria-hidden width={12} height={12} />
+              <Image src="/Arrow-icon.svg" alt="arrow icon" className="mt-[2px]" aria-hidden width={12} height={12} />
             </li>
             <li className="flex flex-row gap-3 items-center leading-none">
               <AnimatedLink title="Linkedin" url="www.linkedin.com/in/victor-lebecq" />
-              <Image src="/arrow-icon.svg" alt="arrow icon" className="mt-[2px]" aria-hidden width={12} height={12} />
+              <Image src="/Arrow-icon.svg" alt="arrow icon" className="mt-[2px]" aria-hidden width={12} height={12} />
             </li>
           </ul>
         </div>
