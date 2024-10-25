@@ -7,7 +7,7 @@ import ProjectSlider from '@/components/common/ProjectSlider';
 
 import { selectedWorks } from '@/constant/selectedWorks';
 
-const DRAG_BUFFER = 25;
+const DRAG_BUFFER = 15;
 
 export default function MobileSlider() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

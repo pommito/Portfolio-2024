@@ -11,7 +11,7 @@ import { educations, workExperiences } from '@/constant/resume';
 
 export default function About() {
   return (
-    <main className="flex flex-col mt-[15dvh] mb-12 gap-4 w-full h-full max-w-[1920px] sm:gap-6 md:grid md:grid-rows-8 md:grid-cols-8 md:mt-0 2xl:mx-auto">
+    <main className="flex flex-col mt-[15dvh] mb-12 gap-6 w-full h-full max-w-[1920px] sm:gap-6 md:grid md:grid-rows-8 md:grid-cols-8 md:mt-0 2xl:mx-auto">
       <section className="flex flex-col gap-3 md:col-start-1 md:col-span-5 md:row-start-2 md:row-span-2">
         <Breadcrumb pageTitle="About" />
         <h1 className="font-medium text-6xl leading-none">About me</h1>
@@ -20,14 +20,14 @@ export default function About() {
           Valencia i’m working remotly for several clients on various projects as a freelancer. When i’m not coding i’m
           probably skiing or exploring mountains.
         </p>
-        <ul className="flex justify-between items-end lg:w-3/5 uppercase">
+        <ul className="flex justify-between items-end lg:w-3/5">
           <SocialLink title="Email" url="mailto:victor.lebecq.pro@gmail.com" />
           <SocialLink title="Github" url="https://github.com/pommito" />
           <SocialLink title="Linkedin" url="www.linkedin.com/in/victor-lebecq" />
           <SocialLink title="Intagram" url="https://www.instagram.com/dev.by.vic" />
         </ul>
       </section>
-      <div className="md:row-start-2 md:row-span-3 md:col-start-6 md:col-span-3 lg:col-start-7 lg:col-span-2 lg:row-span-4 lg:row-start-2  ">
+      <div className="mt-6 sm:mt-0 md:row-start-2 md:row-span-3 md:col-start-6 md:col-span-3 lg:col-start-7 lg:col-span-2 lg:row-span-4 lg:row-start-2  ">
         <Image src={meImage} alt="profil picture" width={400} height={400} className="h-80 w-full md:h-full" />
       </div>
       <div className="flex flex-col justify-center mt-6 md:justify-end md:col-start-1 md:col-span-8 md:row-start-5 md:row-span-4 lg:col-span-5">
