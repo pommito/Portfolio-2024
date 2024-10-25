@@ -33,7 +33,7 @@ export default function MobileSlider() {
   };
 
   return (
-    <div className="relative row-start-4 row-span-2 flex items-end w-full h-full overflow-hidden sm:hidden">
+    <div className="relative row-start-4 row-span-2 flex items-end w-full overflow-hidden sm:hidden">
       <motion.div
         drag="x"
         dragConstraints={{
