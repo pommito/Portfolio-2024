@@ -7,17 +7,6 @@ import Header from '@/components/layout/Header';
 import SmoothScroll from '@/components/ui/SmoothScroll';
 import Grid from '@/components/ui/Grid';
 
-const dotemp8bit = localFont({
-  src: './fonts/Dotemp-8bit.woff',
-  variable: '--font-dotemp-bit',
-  weight: '500',
-});
-const ppNeueMontrealBook = localFont({
-  src: './fonts/ppneuemontreal-book.woff',
-  variable: '--font-pp-book',
-  weight: '400',
-});
-
 const ppNeueMontreal = localFont({
   src: [
     {
@@ -57,15 +46,13 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en">
         <body
-          className={`${dotemp8bit.variable} ${ppNeueMontrealBook.variable} ${ppNeueMontreal.variable} antialiased font-pp relative h-auto min-h-[100dvh] sm:h-[100dvh] w-screen mx-auto p-2 overflow-hidden`}
+          className={`${ppNeueMontreal.variable} bg-white antialiased font-pp relative h-auto min-h-[100dvh] sm:h-[100dvh] w-screen mx-auto p-4 overflow-hidden`}
         >
-          <div className="relative bg-white h-full min-h-[calc(100dvh-24px)] w-full border rounded-md p-4 sm:p-6 overflow-y-scroll overflow-x-hidden lg:overflow-y-hide lg:no-scrollbar ">
-            <Grid />
-            <SmoothScroll>
-              <Header />
-              {children}
-            </SmoothScroll>
-          </div>
+          <Grid />
+          <SmoothScroll>
+            <Header />
+            {children}
+          </SmoothScroll>
         </body>
       </html>
     </ViewTransitions>
