@@ -18,7 +18,7 @@ export default function Works() {
           projects I’ve worked on as a freelance web developer.
         </p>
       </section>
-      <div className="flex flex-col justify-between md:col-start-1 md:col-span-8 md:row-start-4 md:row-span-5 lg:col-start-5 lg:col-span-4 lg:row-start-2 lg:row-span-7">
+      <div className="flex flex-col justify-between md:justify-end md:col-start-1 md:col-span-8 md:row-start-4 md:row-span-5 lg:col-start-5 lg:col-span-4 lg:row-start-2 lg:row-span-7">
         {works.map((work, index) => (
           <WorkListItem key={index} {...work} />
         ))}
