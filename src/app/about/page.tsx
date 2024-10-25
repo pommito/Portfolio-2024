@@ -11,7 +11,7 @@ import { educations, workExperiences } from '@/constant/resume';
 
 export default function About() {
   return (
-    <main className="flex flex-col mt-[20dvh] mb-12 gap-4 w-full h-full max-w-[1920px] sm:gap-6 md:grid md:grid-rows-8 md:grid-cols-8 md:mt-0 2xl:mx-auto">
+    <main className="flex flex-col mt-[15dvh] mb-12 gap-4 w-full h-full max-w-[1920px] sm:gap-6 md:grid md:grid-rows-8 md:grid-cols-8 md:mt-0 2xl:mx-auto">
       <section className="flex flex-col gap-3 md:col-start-1 md:col-span-5 md:row-start-2 md:row-span-2">
         <Breadcrumb pageTitle="About" />
         <h1 className="font-medium text-6xl leading-none">About me</h1>

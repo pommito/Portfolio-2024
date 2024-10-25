@@ -25,7 +25,7 @@ export default async function Page({ params: { slug } }: { params: { slug: strin
   }
 
   return (
-    <main className="flex flex-col mt-[20dvh] mb-12 gap-4 w-full h-full max-w-[1920px] sm:gap-6 md:grid md:grid-rows-8 md:grid-cols-8 md:mt-0 2xl:mx-auto">
+    <main className="flex flex-col mt-[15dvh] mb-12 gap-4 w-full h-full max-w-[1920px] sm:gap-6 md:grid md:grid-rows-8 md:grid-cols-8 md:mt-0 2xl:mx-auto">
       <div className="flex flex-col gap-3 md:col-start-1 md:col-span-8 md:row-start-2 md:row-span-2">
         <Breadcrumb pageTitle={work.title} />
         <h1 className="font-medium text-6xl leading-none">{work.title}</h1>
