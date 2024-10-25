@@ -7,7 +7,31 @@ import Breadcrumb from '@/components/ui/Breadcrumb';
 import { selectedWorks } from '@/constant/selectedWorks';
 import { getWorkByUrl } from '@/services/works';
 
-// Generate static routes at build time
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const work = await getWorkByUrl(params.slug);
+
+  if (!work) {
+    return {
+      title: 'Not Found',
+      description: 'The page you are looking for does not exist.',
+    };
+  }
+
+  return {
+    title: work?.title,
+    openGraph: {
+      images: [
+        {
+          url: `https://victorlebecq.fr${work?.image}`,
+          width: 1080,
+          height: 720,
+          alt: work?.title,
+        },
+      ],
+    },
+  };
+}
+
 export async function generateStaticParams() {
   return selectedWorks.map((work) => ({
     slug: work.slug,
