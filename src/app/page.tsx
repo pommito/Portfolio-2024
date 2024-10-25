@@ -18,7 +18,7 @@ export default function Home() {
           className="flex flex-col justify-between gap-6 sm:flex-row"
           style={{ fontSize: 'clamp(1rem, 2vw, 1.25rem)' }}
         >
-          <p className="text-balance leading-normal sm:w-2/3">
+          <p className="text-balance leading-normal lg:w-1/2">
             I’m a 25 years old developer based in France who likes to work with React, Wordpress, and NextJS. With a
             keen eye for design, I love crafting immersive and scalable experiences on the web. Together, let’s bring
             your projects to life.
@@ -39,7 +39,7 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      <section className="hidden row-start-2 row-span-4 sm:grid grid-rows-4 auto-rows-auto gap-6 w-full sm:row-start-4 sm:row-span-2 sm:grid-cols-2 sm:grid-rows-1 md:grid-cols-4">
+      <section className="hidden sm:auto-rows-auto  sm:w-full sm:grid sm:grid-cols-4 sm:gap-6 sm:row-start-4 sm:row-span-2 sm:grid-rows-1">
         {selectedWorks.map((project, index) => (
           <ProjectCard key={index} {...project} />
         ))}
