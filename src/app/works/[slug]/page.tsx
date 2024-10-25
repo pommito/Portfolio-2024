@@ -73,17 +73,11 @@ export default async function Page({ params: { slug } }: { params: { slug: strin
         </div>
       </div>
       <div className="flex flex-col gap-6 col-start-6 col-span-3 row-start-5 row-span-4">
-        <p className="leading-normal">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim
-          sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a,
-          semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non
-          fermentum diam nisl sit amet erat.
-        </p>
-        <p className="leading-normal">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim
-          sit amet, adipiscing nec, ultricies sed, dolor.
-        </p>
-
+        {work.description.map((paragraph, index) => (
+          <p key={index} className="leading-normal">
+            {paragraph}
+          </p>
+        ))}
         <ul className="flex items-end gap-6 uppercase">
           {work.repoUrl && <SocialLink title="Source code" url={work.repoUrl} />}
           <SocialLink title="Visit website" url={work.url} />

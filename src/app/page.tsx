@@ -23,7 +23,7 @@ export default function Home() {
             keen eye for design, I love crafting immersive and scalable experiences on the web. Together, let’s bring
             your projects to life.
           </p>
-          <ul className="flex justify-between items-end sm:flex-col sm:justify-around">
+          <ul className="flex justify-between items-end sm:flex-col sm:justify-around uppercase">
             <li className="flex flex-row gap-3 items-center leading-none">
               <AnimatedLink title="Email" url="mailto:victor.lebecq.pro@gmail.com" />
               <Image src="/arrow-icon.svg" alt="arrow icon" className="mt-[2px]" aria-hidden width={12} height={12} />
