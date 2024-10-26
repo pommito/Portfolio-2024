@@ -28,7 +28,7 @@ export default function About() {
         </ul>
       </section>
       <div className="mt-6 sm:mt-0 md:row-start-2 md:row-span-3 md:col-start-6 md:col-span-3 lg:col-start-7 lg:col-span-2 lg:row-span-4 lg:row-start-2  ">
-        <Image src={meImage} alt="profil picture" width={400} height={400} className="h-80 w-full md:h-full" />
+        <Image src={meImage} alt="profil picture" width={400} height={400} className="w-full md:h-full" />
       </div>
       <div className="flex flex-col justify-center mt-6 md:justify-end md:col-start-1 md:col-span-8 md:row-start-5 md:row-span-4 lg:col-span-5">
         <h2 className="opacity-50">[ Work Experiences ]</h2>
