@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
-import { ViewTransitions } from 'next-view-transitions';
 import localFont from 'next/font/local';
+import { Analytics } from '@vercel/analytics/react';
+import { ViewTransitions } from 'next-view-transitions';
+
 import './globals.css';
 
 import Header from '@/components/layout/Header';
@@ -67,6 +69,7 @@ export default function RootLayout({
           <SmoothScroll>
             <Header />
             {children}
+            <Analytics />
           </SmoothScroll>
         </body>
       </html>
