@@ -25,8 +25,8 @@ const config: Config = {
         },
       },
       animation: {
-        'slide-in': 'slide-in 0.7s ease-out forwards',
-        'slide-in-delay': 'slide-in 0.7s ease-out 0.1s forwards',
+        'slide-in': 'slide-in 0.9s cubic-bezier(0, 0.55, 0.45, 1) forwards',
+        'slide-in-delay': 'slide-in 0.9s cubic-bezier(0, 0.55, 0.45, 1) 0.25s forwards',
       },
     },
     screens: {

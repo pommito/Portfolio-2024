@@ -14,7 +14,9 @@ export default function About() {
     <main className="flex flex-col mt-[15dvh] mb-12 gap-6 w-full h-full max-w-[1920px] sm:gap-6 md:grid md:grid-rows-8 md:grid-cols-8 md:mt-0 2xl:mx-auto">
       <section className="flex flex-col gap-3 md:col-start-1 md:col-span-5 md:row-start-2 md:row-span-2">
         <Breadcrumb pageTitle="About" />
-        <h1 className="font-medium text-6xl leading-none">About me</h1>
+        <h1 className="block font-medium text-6xl leading-none overflow-y-hidden">
+          <span className="inline-block animate-slide-in">About me</span>
+        </h1>
         <p className="text-balance leading-normal lg:w-4/5">
           Passionate by technologies since childhood, i like to find solutions to solve problems. Currently based in
           Valencia i’m working remotly for several clients on various projects as a freelancer. When i’m not coding i’m

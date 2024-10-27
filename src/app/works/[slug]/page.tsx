@@ -52,7 +52,9 @@ export default async function Page({ params: { slug } }: { params: { slug: strin
     <main className="flex flex-col mt-[15dvh] mb-12 gap-4 w-full h-full max-w-[1920px] sm:gap-6 md:grid md:grid-rows-8 md:grid-cols-8 md:mt-0 2xl:mx-auto">
       <div className="flex flex-col gap-3 md:col-start-1 md:col-span-8 md:row-start-2 md:row-span-2">
         <Breadcrumb pageTitle={work.title} />
-        <h1 className="font-medium text-4xl leading-none sm:text-6xl">{work.title}</h1>
+        <h1 className="block font-medium text-4xl leading-none py-1 overflow-y-hidden sm:text-6xl">
+          <span className="inline-block animate-slide-in">{work.title}</span>
+        </h1>
       </div>
       <div
         className="h-full w-full md:col-start-1 md:col-span-4 md:row-start-4 md:row-span-5"
