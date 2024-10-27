@@ -11,8 +11,12 @@ export default function Home() {
     <main className="flex flex-col justify-end md:grid md:grid-rows-5 gap-6 h-[100dvh] w-full max-w-[1920px] sm:h-full 2xl:mx-auto">
       <section className="row-start-1 row-span-3  flex flex-col justify-end gap-6 sm:h-full">
         <h1 className="flex flex-col font-medium leading-none" style={{ fontSize: 'clamp(3.25rem, 15vw, 7.5rem)' }}>
-          <span>Front end</span>
-          <span className="ml-12 sm:ml-16">Developer</span>
+          <div className="block overflow-y-hidden">
+            <span className="inline-block animate-slide-in">Front end</span>
+          </div>
+          <div className="block overflow-y-hidden ">
+            <span className="inline-block ml-12 sm:ml-16 translate-y-full animate-slide-in-delay">Developer</span>
+          </div>
         </h1>
         <div
           className="flex flex-col justify-between gap-6 sm:flex-row"
