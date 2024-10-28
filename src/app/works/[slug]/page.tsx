@@ -104,8 +104,8 @@ export default async function Page({ params: { slug } }: { params: { slug: strin
           </p>
         ))}
         <ul className="flex items-end gap-6 uppercase">
-          {work.repoUrl && <SocialLink title="Source code" url={work.repoUrl} />}
-          <SocialLink title="Visit website" url={work.url} />
+          {work.repoUrl && <SocialLink title="Source code" url={work.repoUrl} external={true} />}
+          <SocialLink title="Visit website" url={work.url} external={true} />
         </ul>
       </div>
     </main>

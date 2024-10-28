@@ -4,9 +4,10 @@ import { useState } from 'react';
 import { Link } from 'next-view-transitions';
 import { motion } from 'framer-motion';
 
-type TitleProps = {
+type AnimatedLinkProps = {
   title: string;
   url: string;
+  external?: boolean;
 };
 
 /**
@@ -15,7 +16,7 @@ type TitleProps = {
  * @param url url to set on the href avec Link element
  * @returns
  */
-export default function AnimatedLink({ title, url }: TitleProps) {
+export default function AnimatedLink({ title, url, external }: AnimatedLinkProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   const titleAnim = {
@@ -56,6 +57,7 @@ export default function AnimatedLink({ title, url }: TitleProps) {
         setIsHovered(false);
       }}
       data-stagger-link
+      target={external ? '_blank' : '_self'}
     >
       <motion.span
         className="relative whitespace-nowrap"

@@ -23,10 +23,10 @@ export default function About() {
           probably skiing or exploring mountains.
         </p>
         <ul className="flex justify-between items-end lg:w-3/5">
-          <SocialLink title="Email" url="mailto:victor.lebecq.pro@gmail.com" />
-          <SocialLink title="Github" url="https://github.com/pommito" />
-          <SocialLink title="Linkedin" url="www.linkedin.com/in/victor-lebecq" />
-          <SocialLink title="Intagram" url="https://www.instagram.com/dev.by.vic" />
+          <SocialLink title="Email" url="mailto:victor.lebecq.pro@gmail.com" external={true} />
+          <SocialLink title="Github" url="https://github.com/pommito" external={true} />
+          <SocialLink title="Linkedin" url="www.linkedin.com/in/victor-lebecq" external={true} />
+          <SocialLink title="Intagram" url="https://www.instagram.com/dev.by.vic" external={true} />
         </ul>
       </section>
       <div className="mt-6 sm:mt-0 md:row-start-2 md:row-span-3 md:col-start-6 md:col-span-3 lg:col-start-7 lg:col-span-2 lg:row-span-4 lg:row-start-2  ">

@@ -59,7 +59,7 @@ export default function WorkListItem({ title, techs, date, url, githubUrl }: Wor
       <span className="text-xs opacity-75 sm:text-sm md:text-center md:w-1/2">{date}</span>
       <div className="flex gap-6 w-1/5 justify-end items-center">
         {githubUrl && (
-          <Link href={githubUrl}>
+          <Link href={githubUrl} target="_blank">
             <Image
               className="size-4 opacity-75 transition-transform duration-500 ease-in-out hover:opacity-100 hover:scale-110"
               src={githubIcon}
@@ -69,7 +69,7 @@ export default function WorkListItem({ title, techs, date, url, githubUrl }: Wor
           </Link>
         )}
         {url && url.length > 0 ? (
-          <Link href={url}>
+          <Link href={url} target="_blank">
             <Image
               className="size-4 opacity-75 transition-transform duration-500 ease-in-out hover:opacity-100 hover:scale-110"
               src={eyeIcon}
