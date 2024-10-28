@@ -26,7 +26,7 @@ export const selectedWorks: selectedWorkType[] = [
     mobileImage: '/projects/csf_square.webp',
     role: ['Developement'],
     techs: ['Wordpress'],
-    url: 'https://chambery-savoie-football.com',
+    url: 'https://chamberysavoiefootball.fr',
   },
   {
     id: 1,
