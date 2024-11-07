@@ -52,6 +52,12 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+    other: {
+      rel: 'icon',
+      url: '/favicon-32x32.png',
+      sizes: '32x32',
+    },
   },
 };
 
