@@ -7,16 +7,16 @@ export interface experienceType {
 
 export const workExperiences: experienceType[] = [
   {
-    title: 'Freelance Web Developer',
-    date: '[ March 2024 - Present ]',
-    company: 'Titan Informatique',
-    techs: 'Wordpress | Javascript | Php',
-  },
-  {
     title: 'Web Developer',
     date: '[ Feb 2022 - Present ]',
     company: 'Freelance',
-    techs: 'React | Redux | Wordpress',
+    techs: 'React | Wordpress | AstroJS',
+  },
+  {
+    title: 'Freelance Web Developer',
+    date: '[ March 2024 - Nov 2024 ]',
+    company: 'Titan Informatique',
+    techs: 'Wordpress | Javascript | Php',
   },
   {
     title: 'Intern Web Marketer',

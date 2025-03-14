@@ -19,7 +19,7 @@ export default function About() {
         </h1>
         <p className="text-balance leading-normal lg:w-4/5">
           Passionate by technologies since childhood, i like to find solutions to solve problems. Currently based in
-          Valencia i’m working remotly for several clients on various projects as a freelancer. When i’m not coding i’m
+          Grenoble i’m working remotly for several clients on various projects as a freelancer. When i’m not coding i’m
           probably skiing or exploring mountains.
         </p>
         <ul className="flex justify-between items-end lg:w-3/5">
