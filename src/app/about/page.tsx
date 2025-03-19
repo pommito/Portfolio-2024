@@ -46,7 +46,7 @@ export default function About() {
           ))}
         </ul>
       </div>
-      <div className="hidden lg:col-start-6 lg:col-span-3 rlg:ow-start-6 lg:row-span-3 lg:block">
+      <div className="hidden lg:col-start-6 lg:col-span-3 lg:row-start-6 lg:row-span-3 lg:block">
         <Image src={aboutImage} alt="about me image" width={1080} height={720} className="w-full h-full" />
       </div>
     </main>
